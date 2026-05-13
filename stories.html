@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GAPKHAO - Stories & Blog" />
+  <title>Stories | GAPKHAO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Kanit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/stories-video.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-fist">👊</span>
+        <span class="logo-text">GAPKHAO</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="explore.html" class="nav-link">Explore</a>
+        <a href="street-food.html" class="nav-link">Street Food</a>
+        <a href="stories.html" class="nav-link nav-link--active">Stories</a>
+        <a href="blogs.html" class="nav-link">Blogs</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main style="padding-top: 80px;">
+
+    <!-- ========== STORIES / VIDEO ========== -->
+    <section class="stories-section" id="stories">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Stories</span>
+          <h2 class="section-title">Street Food Video</h2>
+        </div>
+
+        <!-- Video Section (Full Width) -->
+        <div class="stories-videos-full reveal">
+          <!-- Main Video Player -->
+          <div class="video-feature">
+            <div class="video-player" id="mainVideoPlayer">
+              <iframe 
+                id="mainVideoIframe"
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/fEHnX0ED1dI" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="video-meta">
+              <h4 id="mainVideoTitle">ริมทางบางกอก Bangkok Street Food | Brief by Kodey</h4>
+              <p id="mainVideoChannel">GoodDayOfficial</p>
+              <span id="mainVideoViews">561k views</span>
+            </div>
+          </div>
+          
+          <!-- Video Thumbnails Row -->
+          <div class="video-thumbs-row">
+            <div class="video-thumb-sm" data-video-id="r2QGqN8LyU4" data-title="ตลาดพลู จากชุมชนสวนพลู สู่ศูนย์รวมอาหารสตรีทฟู้ด | Brief by Kodey" data-channel="GoodDayOfficial" data-views="175k views">
+              <img src="https://img.youtube.com/vi/r2QGqN8LyU4/mqdefault.jpg" alt="ตลาดพลู" />
+              <button class="play-btn play-btn--sm" aria-label="Play">▶</button>
+              <div class="video-duration">12:45</div>
+            </div>
+            
+            <div class="video-thumb-sm" data-video-id="4ehNo4zhwkQ" data-title="$100 Thailand Street Food Challenge!! Budget Bombshell!!" data-channel="Best Ever Food Review Show" data-views="5.1m views">
+              <img src="https://img.youtube.com/vi/4ehNo4zhwkQ/mqdefault.jpg" alt="Thailand Street Food Challenge" />
+              <button class="play-btn play-btn--sm" aria-label="Play">▶</button>
+              <div class="video-duration">18:32</div>
+            </div>
+            
+            <div class="video-thumb-sm" data-video-id="JkXJEzxYt5I" data-title="INSANE THAI STREET FOOD SKILLS 🇹🇭🔥 YOU WON'T BELIEVE YOUR EYES!" data-channel="FOOD WALK ASIA and FOOD DILEX" data-views="39k views">
+              <img src="https://img.youtube.com/vi/JkXJEzxYt5I/mqdefault.jpg" alt="Thai Street Food Skills" />
+              <button class="play-btn play-btn--sm" aria-label="Play">▶</button>
+              <div class="video-duration">15:20</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo--light">
+          <span class="logo-fist">👊</span>
+          <span class="logo-text">GAPKHAO</span>
+        </a>
+        <p>ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ ✨</p>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4>ABOUT</h4>
+          <a href="#">About us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <a href="explore.html">Route</a>
+          <a href="street-food.html">Street Food</a>
+        </div>
+        <div class="footer-col">
+          <h4>STORIES</h4>
+          <a href="stories.html">Video</a>
+          <a href="blogs.html">Blog</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GAPKHAO · All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/stories-video.js"></script>
+</body>
+</html>

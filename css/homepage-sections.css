@@ -1,0 +1,880 @@
+/* ══════════════════════════════════════════════════════════════
+   HOMEPAGE SECTIONS - NEW DESIGN
+   After Hero Banner Sections
+   ══════════════════════════════════════════════════════════════ */
+
+/* Import Dancing Script font for Voice of the Street */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Serif+Thai:wght@400;600;700&display=swap');
+
+.must-try-section {
+  background-color: #FFE4A0;
+  background-image: 
+    linear-gradient(135deg, rgba(255, 228, 160, 0.75) 0%, rgba(253, 217, 138, 0.75) 100%),
+    url('../backgrounds/must-try-bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 0;
+  position: relative;
+  min-height: 800px;
+}
+
+/* Decorative overlay for better text readability */
+.must-try-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, 
+    rgba(255, 228, 160, 0.70) 0%,
+    rgba(255, 228, 160, 0.60) 50%,
+    rgba(255, 228, 160, 0.70) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.must-try-section .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.must-try-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--color-header);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* 4-Column Grid */
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Polaroid-style Card */
+.dish-card {
+  background: #ffffff;
+  border: 2px solid var(--color-header);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 4px 4px 12px rgba(44, 37, 32, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dish-card:nth-child(1) { transform: rotate(-1.5deg); }
+.dish-card:nth-child(2) { transform: rotate(1.5deg); }
+.dish-card:nth-child(3) { transform: rotate(-1deg); }
+.dish-card:nth-child(4) { transform: rotate(1deg); }
+.dish-card:nth-child(5) { transform: rotate(1.2deg); }
+.dish-card:nth-child(6) { transform: rotate(-1.3deg); }
+.dish-card:nth-child(7) { transform: rotate(1.4deg); }
+.dish-card:nth-child(8) { transform: rotate(-1.1deg); }
+
+.dish-card:hover {
+  transform: rotate(0deg) translateY(-8px) !important;
+  box-shadow: 6px 6px 20px rgba(44, 37, 32, 0.3);
+}
+
+/* Square Image Area */
+.dish-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.dish-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dish-image-placeholder {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.2rem;
+  color: var(--color-header);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Dish Names */
+.dish-content h3 {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.5rem;
+  color: var(--color-header);
+  margin-bottom: 0.3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.dish-content h4 {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-header);
+  opacity: 0.5;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* CTA Button */
+.find-near-btn {
+  width: 100%;
+  background: var(--color-bg-dark);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Lato', sans-serif;
+}
+
+.find-near-btn:hover {
+  background: var(--color-accent2);
+  transform: translateY(-2px);
+}
+
+/* ── Two-Panel Row: Map & Tips ────────────────────────────── */
+.two-panel-row {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  min-height: 500px;
+}
+
+/* Left Panel - Trending Destinations */
+.trending-panel {
+  background: #FFE4A0;
+  padding: 3rem;
+  position: relative;
+}
+
+.trending-panel h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--color-header);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* CSS Illustrated Map */
+.bangkok-map {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  background: var(--color-bg);
+  border: 4px double var(--color-header);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* River Path */
+.river-path {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 80px;
+  height: 100%;
+  background: #8BBBD0;
+  clip-path: path('M 0 0 Q 20 100 10 200 Q 0 300 20 400 L 80 400 Q 60 300 70 200 Q 80 100 60 0 Z');
+  opacity: 0.6;
+}
+
+/* Location Pins */
+.location-pin {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--color-bg-dark);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.location-pin::before {
+  content: '📍';
+  transform: rotate(45deg);
+  font-size: 1.2rem;
+}
+
+.location-pin:hover {
+  transform: rotate(-45deg) scale(1.2);
+}
+
+.pin-chinatown {
+  top: 30%;
+  left: 15%;
+}
+
+.pin-center {
+  top: 50%;
+  left: 50%;
+}
+
+.pin-right {
+  top: 35%;
+  right: 15%;
+}
+
+/* Pin Labels */
+.pin-label {
+  position: absolute;
+  background: #FFE4A0;
+  color: var(--color-header);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-family: 'Lato', sans-serif;
+}
+
+.pin-chinatown .pin-label {
+  top: 50px;
+  left: -20px;
+}
+
+.pin-center .pin-label {
+  top: 50px;
+  left: -30px;
+}
+
+.pin-right .pin-label {
+  top: 50px;
+  right: -20px;
+}
+
+/* Right Panel - Tips */
+.tips-panel {
+  background: var(--color-bg-dark);
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.tips-panel .section-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  color: var(--color-highlight);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.tips-panel h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--color-highlight);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* CSS Notepad */
+.notepad {
+  background: var(--color-highlight);
+  padding: 1.5rem;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
+}
+
+.notepad::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 29px,
+    #8b7355 29px,
+    #8b7355 30px
+  );
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.notepad ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.notepad li {
+  color: var(--color-header);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+}
+
+.notepad li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-bg-dark);
+  font-weight: bold;
+}
+
+/* Condiment Jars */
+.condiment-jars {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.jar {
+  width: 50px;
+  height: 70px;
+  background: var(--color-header);
+  border-radius: 4px 4px 8px 8px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.jar::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 12px;
+  background: var(--color-highlight);
+  border-radius: 4px 4px 0 0;
+}
+
+.jar::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: var(--color-highlight);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* Price Tag */
+.price-tag {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--color-highlight);
+  color: var(--color-header);
+  padding: 0.5rem 1rem;
+  clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ── Bottom Two-Panel Row: Planner & Community ────────────── */
+.bottom-two-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+/* Left - Quick Planner (Dark Section) */
+.planner-panel {
+  background: var(--color-header);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cobblestone Texture */
+.planner-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, #3A2E28 2px, transparent 2px),
+    radial-gradient(circle at 30% 40%, #3A2E28 2px, transparent 2px),
+    radial-gradient(circle at 50% 60%, #3A2E28 2px, transparent 2px),
+    radial-gradient(circle at 70% 30%, #3A2E28 2px, transparent 2px),
+    radial-gradient(circle at 90% 50%, #3A2E28 2px, transparent 2px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.planner-panel .section-label {
+  display: inline-block;
+  border: 2px solid var(--color-highlight);
+  color: var(--color-highlight);
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  background: transparent;
+  font-family: 'Lato', sans-serif;
+}
+
+.planner-panel h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  color: var(--color-highlight);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+/* Tuk-tuk Illustration */
+.tuktuk {
+  width: 120px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.tuktuk-body {
+  width: 100%;
+  height: 60px;
+  background: var(--color-bg-dark);
+  border-radius: 8px 8px 4px 4px;
+  position: relative;
+}
+
+.tuktuk-roof {
+  width: 80%;
+  height: 20px;
+  background: var(--color-bg-dark);
+  border-radius: 8px 8px 0 0;
+  position: absolute;
+  top: -15px;
+  left: 10%;
+}
+
+.tuktuk-wheel {
+  width: 30px;
+  height: 30px;
+  background: var(--color-header);
+  border: 4px solid var(--color-highlight);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -15px;
+}
+
+.tuktuk-wheel:first-of-type { left: 10px; }
+.tuktuk-wheel:last-of-type { right: 10px; }
+
+/* Places Card */
+.places-card {
+  background: #1A120E;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.places-header {
+  color: var(--color-bg);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+
+.place-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  padding: 0.75rem;
+  background: rgba(255, 228, 160, 0.05);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.place-item:hover {
+  background: rgba(255, 228, 160, 0.15);
+  transform: translateX(5px);
+}
+
+.place-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-bg-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.place-info {
+  flex: 1;
+}
+
+.place-name {
+  color: var(--color-highlight);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.place-meta {
+  color: var(--color-bg);
+  font-size: 0.8rem;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Right - Community Memory Wall */
+.community-panel {
+  background: var(--color-bg);
+  padding: 3rem;
+  position: relative;
+}
+
+.community-panel .section-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7rem;
+  color: var(--color-header);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.community-panel h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--color-header);
+  margin-bottom: 0.3rem;
+}
+
+.community-panel .subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  color: var(--color-header);
+  opacity: 0.6;
+  margin-bottom: 2rem;
+}
+
+/* Polaroid Memory Wall */
+.memory-wall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+.memory-wall .polaroid-card {
+  background: white;
+  padding: 0.8rem;
+  border: 1px solid #D4A574;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer !important;
+}
+
+.memory-wall .polaroid-card:nth-child(1) { transform: rotate(-3deg); }
+.memory-wall .polaroid-card:nth-child(2) { transform: rotate(2deg); }
+.memory-wall .polaroid-card:nth-child(3) { transform: rotate(-2deg); }
+.memory-wall .polaroid-card:nth-child(4) { transform: rotate(3deg); }
+.memory-wall .polaroid-card:nth-child(5) { transform: rotate(-1deg); }
+.memory-wall .polaroid-card:nth-child(6) { transform: rotate(2deg); }
+
+.memory-wall .polaroid-card:hover {
+  transform: rotate(0deg) scale(1.05) !important;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+.memory-wall .polaroid-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #F5E6D3;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.memory-wall .polaroid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.memory-wall .polaroid-username {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  color: #2C2520;
+  opacity: 0.4;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* ── Responsive Design ────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .dishes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .two-panel-row,
+  .bottom-two-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .bangkok-map {
+    height: 350px;
+  }
+
+  .memory-wall {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .planner-panel,
+  .community-panel {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dishes-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .trending-panel,
+  .tips-panel,
+  .planner-panel,
+  .community-panel {
+    padding: 2rem 1.5rem;
+  }
+
+  .planner-panel h2 {
+    font-size: 2.5rem;
+  }
+
+  .memory-wall {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .polaroid-card {
+    transform: rotate(0deg) !important;
+  }
+  
+  .place-item {
+    padding: 1rem;
+  }
+  
+  .place-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+  
+  .place-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .must-try-section .section-title {
+    font-size: 1.8rem;
+  }
+
+  .trending-panel h2,
+  .tips-panel h2,
+  .community-panel h2 {
+    font-size: 1.5rem;
+  }
+
+  .planner-panel h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .place-item {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+  
+  .place-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .place-name {
+    font-size: 0.9rem;
+  }
+  
+  .place-meta {
+    font-size: 0.75rem;
+  }
+  
+  .places-card {
+    padding: 1rem;
+  }
+}
+
+
+/* ── Polaroid Cards (Voice of the Street) ─────────────────── */
+.polaroid-card {
+  background: white;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.polaroid-card:hover {
+  transform: translateY(-4px) rotate(0deg) scale(1.05) !important;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+.polaroid-card:active {
+  transform: translateY(-2px) rotate(0deg) scale(1.02) !important;
+}
+
+.polaroid-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.polaroid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.polaroid-username {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  color: #2C2520;
+  opacity: 0.4;
+  text-align: center;
+}
+
+.polaroid-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2C2520;
+  text-align: center;
+  line-height: 1.3;
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ── Data Sources Section ─────────────────────────────────── */
+.data-sources {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  background: rgba(44, 37, 32, 0.3);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 228, 160, 0.3);
+}
+
+.data-sources h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #FFE4A0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.data-sources ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.data-sources li {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #FFE4A0;
+  padding: 0.8rem 1.5rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 228, 160, 0.1);
+  border-left: 4px solid #D96B45;
+  border-radius: 4px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.data-sources li:hover {
+  background: rgba(255, 228, 160, 0.2);
+  transform: translateX(5px);
+}
+
+.data-sources li:last-child {
+  margin-bottom: 0;
+}

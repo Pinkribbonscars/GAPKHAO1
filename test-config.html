@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuration Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .test-box {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .success {
+      color: #22c55e;
+      font-weight: bold;
+    }
+    .error {
+      color: #ef4444;
+      font-weight: bold;
+    }
+    .warning {
+      color: #f59e0b;
+      font-weight: bold;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    pre {
+      background: #1f2937;
+      color: #10b981;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .status {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    .status.ok {
+      background: #d1fae5;
+      border-left: 4px solid #22c55e;
+    }
+    .status.fail {
+      background: #fee2e2;
+      border-left: 4px solid #ef4444;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 GAPKHAO Configuration Test</h1>
+  
+  <div class="test-box">
+    <h2>Test 1: Check Config File</h2>
+    <button onclick="testConfigFile()">Run Test</button>
+    <div id="test1-result"></div>
+  </div>
+
+  <div class="test-box">
+    <h2>Test 2: Check Config Loader</h2>
+    <button onclick="testConfigLoader()">Run Test</button>
+    <div id="test2-result"></div>
+  </div>
+
+  <div class="test-box">
+    <h2>Test 3: Check Street Food Data</h2>
+    <button onclick="testStreetFoodData()">Run Test</button>
+    <div id="test3-result"></div>
+  </div>
+
+  <div class="test-box">
+    <h2>Test 4: Simulate Filtering</h2>
+    <button onclick="testFiltering()">Run Test</button>
+    <div id="test4-result"></div>
+  </div>
+
+  <div class="test-box">
+    <h2>Quick Actions</h2>
+    <button onclick="clearCache()">Clear Cache Instructions</button>
+    <button onclick="window.location.href='street-food.html'">Go to Street Food Page</button>
+  </div>
+
+  <script>
+    async function testConfigFile() {
+      const result = document.getElementById('test1-result');
+      result.innerHTML = '<p>Testing...</p>';
+      
+      try {
+        const response = await fetch('config/street-food-config.json');
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const config = await response.json();
+        
+        let html = '<div class="status ok">';
+        html += '<p class="success">✅ Config file loaded successfully!</p>';
+        html += '<pre>' + JSON.stringify(config, null, 2) + '</pre>';
+        html += '<p><strong>Items per category:</strong> ' + config.itemsPerCategory + '</p>';
+        html += '<p><strong>Link to Explore:</strong> ' + config.linkToExplore + '</p>';
+        html += '</div>';
+        
+        result.innerHTML = html;
+      } catch (error) {
+        result.innerHTML = `
+          <div class="status fail">
+            <p class="error">❌ Failed to load config file</p>
+            <p><strong>Error:</strong> ${error.message}</p>
+            <p><strong>Solution:</strong> Make sure config/street-food-config.json exists</p>
+          </div>
+        `;
+      }
+    }
+
+    async function testConfigLoader() {
+      const result = document.getElementById('test2-result');
+      result.innerHTML = '<p>Testing...</p>';
+      
+      try {
+        const response = await fetch('js/config-loader.js');
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const code = await response.text();
+        const hasLoadFunction = code.includes('loadStreetFoodConfig');
+        const hasApplyFunction = code.includes('applyStreetFoodConfig');
+        
+        let html = '<div class="status ok">';
+        html += '<p class="success">✅ Config loader file exists!</p>';
+        html += '<p>Has loadStreetFoodConfig: ' + (hasLoadFunction ? '✅' : '❌') + '</p>';
+        html += '<p>Has applyStreetFoodConfig: ' + (hasApplyFunction ? '✅' : '❌') + '</p>';
+        html += '</div>';
+        
+        result.innerHTML = html;
+      } catch (error) {
+        result.innerHTML = `
+          <div class="status fail">
+            <p class="error">❌ Failed to load config-loader.js</p>
+            <p><strong>Error:</strong> ${error.message}</p>
+          </div>
+        `;
+      }
+    }
+
+    async function testStreetFoodData() {
+      const result = document.getElementById('test3-result');
+      result.innerHTML = '<p>Testing...</p>';
+      
+      try {
+        const response = await fetch('js/street-food.js');
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const code = await response.text();
+        const hasFoodData = code.includes('const foodData');
+        const hasRenderFunction = code.includes('function renderFoodGrid');
+        const hasFiltering = code.includes('window.streetFoodConfig');
+        
+        let html = '<div class="status ' + (hasFiltering ? 'ok' : 'fail') + '">';
+        html += '<p class="' + (hasFoodData ? 'success' : 'error') + '">Food data: ' + (hasFoodData ? '✅' : '❌') + '</p>';
+        html += '<p class="' + (hasRenderFunction ? 'success' : 'error') + '">Render function: ' + (hasRenderFunction ? '✅' : '❌') + '</p>';
+        html += '<p class="' + (hasFiltering ? 'success' : 'error') + '">Filtering logic: ' + (hasFiltering ? '✅' : '❌') + '</p>';
+        
+        if (!hasFiltering) {
+          html += '<p class="error"><strong>⚠️ Filtering logic not found!</strong></p>';
+          html += '<p>The street-food.js file needs to be updated with filtering code.</p>';
+        }
+        
+        html += '</div>';
+        result.innerHTML = html;
+      } catch (error) {
+        result.innerHTML = `
+          <div class="status fail">
+            <p class="error">❌ Failed to load street-food.js</p>
+            <p><strong>Error:</strong> ${error.message}</p>
+          </div>
+        `;
+      }
+    }
+
+    async function testFiltering() {
+      const result = document.getElementById('test4-result');
+      result.innerHTML = '<p>Testing...</p>';
+      
+      try {
+        // Load config
+        const configResponse = await fetch('config/street-food-config.json');
+        const config = await configResponse.json();
+        
+        // Simulate food data
+        const mockFoodData = {
+          main: [
+            {id: 'khao-man-gai', name: 'ข้าวมันไก่'},
+            {id: 'charoen-saeng', name: 'ข้าวขาหมู'},
+            {id: 'seemorakat', name: 'ข้าวหมูแดง'},
+            {id: 'ped-mak', name: 'กะเพรา'},
+            {id: 'prajak-ped', name: 'เป็ดย่าง'},
+            {id: 'aisa-rosdee', name: 'ข้าวหมก'},
+            {id: 'khao-gaeng', name: 'ข้าวแกง'},
+            {id: 'joke-samyan', name: 'โจ๊ก'},
+            {id: 'gai-tod', name: 'ไก่ทอด'}
+          ]
+        };
+        
+        // Apply filtering
+        const allowedIds = config.categories.main;
+        const filtered = mockFoodData.main.filter(food => allowedIds.includes(food.id));
+        
+        let html = '<div class="status ok">';
+        html += '<p class="success">✅ Filtering simulation successful!</p>';
+        html += '<p><strong>Original items:</strong> ' + mockFoodData.main.length + '</p>';
+        html += '<p><strong>Allowed IDs:</strong> ' + allowedIds.join(', ') + '</p>';
+        html += '<p><strong>After filtering:</strong> ' + filtered.length + ' items</p>';
+        html += '<p><strong>Filtered items:</strong></p>';
+        html += '<ul>';
+        filtered.forEach(food => {
+          html += '<li>' + food.name + ' (' + food.id + ')</li>';
+        });
+        html += '</ul>';
+        
+        if (filtered.length === config.itemsPerCategory) {
+          html += '<p class="success">✅ Correct! Showing ' + config.itemsPerCategory + ' items as configured.</p>';
+        } else {
+          html += '<p class="error">❌ Wrong! Should show ' + config.itemsPerCategory + ' items but got ' + filtered.length + '</p>';
+        }
+        
+        html += '</div>';
+        result.innerHTML = html;
+      } catch (error) {
+        result.innerHTML = `
+          <div class="status fail">
+            <p class="error">❌ Filtering test failed</p>
+            <p><strong>Error:</strong> ${error.message}</p>
+          </div>
+        `;
+      }
+    }
+
+    function clearCache() {
+      alert(`To clear cache:
+
+Windows:
+1. Press Ctrl + Shift + Delete
+2. Select "Cached images and files"
+3. Click "Clear data"
+
+Or use Hard Refresh:
+- Press Ctrl + F5
+- Or Ctrl + Shift + R
+
+Then reload the Street Food page.`);
+    }
+
+    // Auto-run first test
+    window.addEventListener('load', () => {
+      testConfigFile();
+    });
+  </script>
+</body>
+</html>

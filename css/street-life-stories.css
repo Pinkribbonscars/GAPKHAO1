@@ -1,0 +1,450 @@
+/* ══════════════════════════════════════════════════════════════
+   STREET LIFE STORIES - Modal System
+   Thai Streetfood Softpower Theme
+   ══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Noto+Serif+Thai:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ── Story Modal Overlay ────────────────────────────────────── */
+.story-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.story-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ── Story Modal Container ────────────────────────────────────── */
+.story-modal {
+  position: relative;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #FFF;
+  border-radius: 0;
+  transform: translateY(50px);
+  transition: transform 0.4s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.story-modal-overlay.active .story-modal {
+  transform: translateY(0);
+}
+
+/* ── Close Button ────────────────────────────────────────── */
+.story-close-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+/* ── Hero Section ────────────────────────────────────────── */
+.story-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.story-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+}
+
+.story-category-badge {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: rgba(255, 228, 160, 0.9);
+  color: #2C2520;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.story-title {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.story-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #FFE4A0;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.story-intro {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+/* ── Content Section ────────────────────────────────────────── */
+.story-content {
+  padding: 4rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.story-section {
+  margin-bottom: 3rem;
+}
+
+.story-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #2C2520;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.story-section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 80%;
+  background: linear-gradient(to bottom, #D96B45, #F5C97A);
+}
+
+.story-section-content {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #3D3D3D;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Quote Section ────────────────────────────────────────── */
+.story-quote {
+  background: linear-gradient(135deg, #FFE4A0 0%, #F5C97A 100%);
+  padding: 2.5rem;
+  margin: 3rem 0;
+  border-left: 6px solid #D96B45;
+  position: relative;
+}
+
+.story-quote::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 6rem;
+  color: rgba(217, 107, 69, 0.2);
+  font-family: 'Playfair Display', serif;
+  line-height: 1;
+}
+
+.story-quote-text {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.3rem;
+  color: #2C2520;
+  line-height: 1.7;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.story-quote-author {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  color: #5C3D2E;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* ── Photo Gallery ────────────────────────────────────────── */
+.story-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.story-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 4/3;
+}
+
+.story-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ── Highlight Facts ────────────────────────────────────────── */
+.story-highlights {
+  background: #2C2520;
+  color: white;
+  padding: 3rem;
+  margin: 3rem -3rem;
+}
+
+.story-highlights-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #FFE4A0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.story-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.story-highlight-item {
+  text-align: center;
+}
+
+.story-highlight-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.story-highlight-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: #F5C97A;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.story-highlight-value {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.5;
+}
+
+/* ── Interactive Map ────────────────────────────────────────── */
+.story-map-section {
+  background: #F5E6D3;
+  padding: 3rem;
+  margin: 3rem -3rem;
+  text-align: center;
+}
+
+.story-map-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #2C2520;
+  margin-bottom: 1.5rem;
+}
+
+.story-map-placeholder {
+  background: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.story-map-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.story-map-text {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.1rem;
+  color: #5C3D2E;
+  line-height: 1.7;
+}
+
+/* ── Bangkok After Dark Specific Styles ────────────────────────────────────────── */
+.story-modal.theme-dark .story-content {
+  background: linear-gradient(to bottom, #1a1a2e 0%, #16213e 100%);
+  color: white;
+}
+
+.story-modal.theme-dark .story-section-title {
+  color: #FFE4A0;
+}
+
+.story-modal.theme-dark .story-section-content {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.story-modal.theme-dark .story-highlights {
+  background: #0f3460;
+}
+
+/* ── Responsive Design ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .story-modal {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .story-hero {
+    height: 50vh;
+    min-height: 400px;
+  }
+
+  .story-hero-overlay {
+    padding: 2rem 1.5rem;
+  }
+
+  .story-title {
+    font-size: 2rem;
+  }
+
+  .story-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .story-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .story-section-title {
+    font-size: 1.5rem;
+  }
+
+  .story-section-content {
+    font-size: 1rem;
+  }
+
+  .story-highlights,
+  .story-map-section {
+    margin: 2rem -1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .story-close-btn {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ── Animation ────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.story-modal-overlay.active .story-section {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.story-modal-overlay.active .story-section:nth-child(1) { animation-delay: 0.1s; }
+.story-modal-overlay.active .story-section:nth-child(2) { animation-delay: 0.2s; }
+.story-modal-overlay.active .story-section:nth-child(3) { animation-delay: 0.3s; }
+.story-modal-overlay.active .story-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* ── Clickable Cards ────────────────────────────────────────── */
+.street-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.street-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.street-card::after {
+  content: 'อ่านเรื่องราว →';
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 228, 160, 0.9);
+  color: #2C2520;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-family: 'Noto Serif Thai', serif;
+}
+
+.street-card:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Street Story Card (Voice of the Street) ────────────────────────────────────────── */
+.street-story-card {
+  cursor: pointer !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.street-story-card:hover {
+  transform: rotate(0deg) scale(1.05) !important;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
+}
+
+.street-story-card:active {
+  transform: rotate(0deg) scale(1.02) !important;
+}

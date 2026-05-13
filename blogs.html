@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GAPKHAO - Bangkok Street Food Blogs" />
+  <title>Blogs | GAPKHAO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Kanit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/stories-blog.css" />
+  <link rel="stylesheet" href="css/blogs-page.css" />
+  <link rel="stylesheet" href="css/language-switcher-cn.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-fist">👊</span>
+        <span class="logo-text">GAPKHAO</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-translate="navbar.home">Home</a>
+        <a href="explore.html" class="nav-link" data-translate="navbar.explore">Explore</a>
+        <a href="street-food.html" class="nav-link" data-translate="navbar.streetFood">Street Food</a>
+        <a href="stories.html" class="nav-link" data-translate="navbar.stories">Stories</a>
+        <a href="blogs.html" class="nav-link nav-link--active" data-translate="navbar.blogs">Blogs</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn active" data-lang="th">ไทย</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+
+  <main style="padding-top: 80px;">
+
+    <!-- ========== BLOGS HERO ========== -->
+    <section class="blogs-hero">
+      <div class="blogs-hero-content">
+        <span class="section-tag" data-translate="blogsPage.tag">Street Food Stories</span>
+        <h1 class="blogs-hero-title" data-translate="blogsPage.title">Street Food Blog </h1>
+        <p class="blogs-hero-subtitle" data-translate="blogsPage.subtitle"></p>
+      </div>
+    </section>
+
+    <!-- ========== BLOGS GRID (HORIZONTAL CARDS) ========== -->
+    <section class="blogs-main-section">
+      <div class="container-wide">
+        <div class="blogs-horizontal-grid" id="blogsHorizontalGrid">
+          <!-- Blogs will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo--light">
+          <span class="logo-fist">👊</span>
+          <span class="logo-text">GAPKHAO</span>
+        </a>
+        <p data-translate="footer.tagline">ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ ✨</p>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4 data-translate="footer.about">ABOUT</h4>
+          <a href="#" data-translate="footer.aboutUs">About us</a>
+          <a href="contact.html" data-translate="footer.contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-translate="footer.explore">EXPLORE</h4>
+          <a href="explore.html" data-translate="footer.route">Route</a>
+          <a href="street-life.html" data-translate="footer.streetLife">Street life</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-translate="footer.stories">STORIES</h4>
+          <a href="stories.html" data-translate="footer.video">Video</a>
+          <a href="blogs.html" data-translate="footer.blog">Blog</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p data-translate="footer.copyright">© 2026 GAPKHAO · All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/stories-blog.js"></script>
+  <script src="js/language-switcher-cn.js"></script>
+</body>
+</html>

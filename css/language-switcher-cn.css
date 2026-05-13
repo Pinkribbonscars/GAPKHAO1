@@ -1,0 +1,74 @@
+/* ══════════════════════════════════════════════════════════════
+   LANGUAGE SWITCHER - Thai/Chinese
+   ══════════════════════════════════════════════════════════════ */
+
+.language-switcher {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  display: flex;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid #E8D5B5;
+}
+
+.lang-btn {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid transparent;
+  background: transparent;
+  border-radius: 50px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 60px;
+}
+
+.lang-btn:hover {
+  background: #FFF5DC;
+  color: #D96B45;
+}
+
+.lang-btn.active {
+  background: #D96B45;
+  border-color: #D96B45;
+  color: white;
+  box-shadow: 0 2px 8px rgba(217, 107, 69, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .language-switcher {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.4rem;
+  }
+
+  .lang-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    min-width: 50px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-switcher {
+  animation: fadeInUp 0.5s ease 0.5s both;
+}

@@ -1,0 +1,535 @@
+/* ══════════════════════════════════════════════════════════════
+   STREET FOOD PAGE - Category-Based Design
+   Thai Streetfood Softpower Theme
+   ══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Noto+Serif+Thai:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* ── Hero Section ────────────────────────────────────────── */
+.street-food-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.street-food-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 228, 160, 0.85) 0%, rgba(245, 201, 122, 0.85) 50%, rgba(217, 107, 69, 0.85) 100%);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(44, 37, 32, 0.1) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-header);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--color-header);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: var(--color-header);
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-subtitle {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.2rem;
+  color: var(--color-header);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ── Category Section ────────────────────────────────────────── */
+.category-section {
+  background: var(--color-bg);
+  padding: 3rem 0 5rem;
+  min-height: 80vh;
+}
+
+/* ── Category Tabs ────────────────────────────────────────── */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.category-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background: rgba(217, 107, 69, 0.1);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.1rem;
+  color: var(--color-header);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.category-tab:hover::before {
+  left: 100%;
+}
+
+.category-tab:hover {
+  background: rgba(217, 107, 69, 0.2);
+  transform: translateY(-2px);
+}
+
+.category-tab.active {
+  background: linear-gradient(135deg, #D96B45 0%, #F5C97A 100%);
+  border-color: var(--color-header);
+  color: white;
+  box-shadow: 0 4px 12px rgba(217, 107, 69, 0.4);
+}
+
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+.tab-text {
+  font-weight: 600;
+}
+
+/* ── Food Grid ────────────────────────────────────────────── */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.food-grid.changing {
+  opacity: 0;
+}
+
+/* ── Food Card ────────────────────────────────────────────── */
+.food-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.food-card:nth-child(1) { animation-delay: 0.1s; }
+.food-card:nth-child(2) { animation-delay: 0.15s; }
+.food-card:nth-child(3) { animation-delay: 0.2s; }
+.food-card:nth-child(4) { animation-delay: 0.25s; }
+.food-card:nth-child(5) { animation-delay: 0.3s; }
+.food-card:nth-child(6) { animation-delay: 0.35s; }
+.food-card:nth-child(7) { animation-delay: 0.4s; }
+.food-card:nth-child(8) { animation-delay: 0.45s; }
+.food-card:nth-child(9) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.food-card-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-bg);
+}
+
+.food-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.food-card:hover .food-card-image img {
+  transform: scale(1.1);
+}
+
+.food-card-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 228, 160, 0.95);
+  color: var(--color-header);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'Lato', sans-serif;
+}
+
+.food-card-content {
+  padding: 1.5rem;
+}
+
+.food-card-title {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.3rem;
+  color: var(--color-header);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.food-card-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-header);
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.food-card-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 0.9rem;
+  color: #D96B45;
+  margin-bottom: 0.8rem;
+}
+
+.food-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-header);
+}
+
+.food-card-cta {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--color-bg-dark);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.food-card-cta:hover {
+  background: #D96B45;
+  transform: translateY(-2px);
+}
+
+/* ── Location Modal ────────────────────────────────────────── */
+.location-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.location-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.location-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.location-modal-overlay.active .location-modal {
+  transform: scale(1);
+}
+
+.location-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.location-modal-close:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+.location-modal-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, #FFE4A0 0%, #F5C97A 100%);
+}
+
+.location-modal-title {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.8rem;
+  color: var(--color-header);
+  margin-bottom: 0.5rem;
+}
+
+.location-modal-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: var(--color-header);
+  opacity: 0.7;
+}
+
+.location-modal-body {
+  padding: 2rem;
+}
+
+.location-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.location-info-item:last-child {
+  border-bottom: none;
+}
+
+.location-info-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.location-info-content {
+  flex: 1;
+}
+
+.location-info-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-header);
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+}
+
+.location-info-value {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1rem;
+  color: var(--color-header);
+  line-height: 1.6;
+}
+
+.location-modal-actions {
+  padding: 1.5rem 2rem;
+  background: var(--color-bg);
+  display: flex;
+  gap: 1rem;
+}
+
+.location-modal-btn {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.location-modal-btn-primary {
+  background: var(--color-bg-dark);
+  color: white;
+}
+
+.location-modal-btn-primary:hover {
+  background: #D96B45;
+  transform: translateY(-2px);
+}
+
+.location-modal-btn-secondary {
+  background: white;
+  color: var(--color-header);
+  border: 2px solid var(--color-header);
+}
+
+.location-modal-btn-secondary:hover {
+  background: var(--color-header);
+  color: white;
+}
+
+/* ── Responsive Design ────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .category-tabs {
+    gap: 0.5rem;
+  }
+
+  .category-tab {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .tab-icon {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .street-food-hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .location-modal-overlay {
+    padding: 1rem;
+  }
+
+  .location-modal-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .category-tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .tab-icon {
+    font-size: 1rem;
+  }
+
+  .food-card-content {
+    padding: 1rem;
+  }
+
+  .food-card-title {
+    font-size: 1.1rem;
+  }
+}

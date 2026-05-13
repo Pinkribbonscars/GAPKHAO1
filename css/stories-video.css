@@ -1,0 +1,316 @@
+/* ══════════════════════════════════════════════════════════════
+   STORIES PAGE - Responsive Video Player Styles
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Video Player Container ────────────────────────────────── */
+.video-player {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ── Video Feature Section ────────────────────────────────── */
+.video-feature {
+  margin-bottom: 2rem;
+}
+
+.video-meta {
+  padding: 1rem 0;
+}
+
+.video-meta h4 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.2rem;
+  color: var(--color-header);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.video-meta p {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-header);
+  opacity: 0.7;
+  margin-bottom: 0.3rem;
+}
+
+.video-meta span {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-header);
+  opacity: 0.5;
+}
+
+/* ── Video Thumbnails Row ────────────────────────────────── */
+.video-thumbs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.video-thumb-sm {
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-thumb-sm::before {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-thumb-sm img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-thumb-sm:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-thumb-sm:hover img {
+  transform: scale(1.05);
+}
+
+/* Active State */
+.video-thumb-sm.active {
+  box-shadow: 0 0 0 3px var(--color-accent2);
+}
+
+/* ── Play Button ────────────────────────────────────────── */
+.play-btn--sm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  color: var(--color-bg-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.video-thumb-sm:hover .play-btn--sm {
+  background: var(--color-accent2);
+  color: white;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ── Video Duration Badge ────────────────────────────────── */
+.video-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  z-index: 2;
+}
+
+/* ── Stories Column Title ────────────────────────────────── */
+.stories-col-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--color-header);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* ── Full Width Video Layout ────────────────────────────────── */
+.stories-videos-full {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stories-videos-full .video-feature {
+  margin-bottom: 2.5rem;
+}
+
+.stories-videos-full .video-thumbs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ── Responsive Design ────────────────────────────────────── */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .stories-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .video-thumbs-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stories-col-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .video-thumbs-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .video-meta h4 {
+    font-size: 1.1rem;
+  }
+
+  .video-meta p {
+    font-size: 0.85rem;
+  }
+
+  .video-meta span {
+    font-size: 0.8rem;
+  }
+
+  .stories-col-title {
+    font-size: 1.4rem;
+  }
+
+  .play-btn--sm {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .video-thumbs-row {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .video-meta h4 {
+    font-size: 1rem;
+  }
+
+  .stories-col-title {
+    font-size: 1.2rem;
+  }
+
+  .video-duration {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
+/* ── Loading State ────────────────────────────────────────── */
+.video-player.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 10;
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ── Hover Effects ────────────────────────────────────────── */
+.video-thumb-sm::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.video-thumb-sm:hover::after {
+  opacity: 1;
+}
+
+/* ── Accessibility ────────────────────────────────────────── */
+.video-thumb-sm:focus {
+  outline: 3px solid var(--color-accent2);
+  outline-offset: 2px;
+}
+
+.play-btn--sm:focus {
+  outline: 3px solid var(--color-accent2);
+  outline-offset: 2px;
+}
+
+/* ── Animation ────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-feature {
+  animation: fadeIn 0.6s ease;
+}
+
+.video-thumb-sm {
+  animation: fadeIn 0.6s ease;
+}
+
+.video-thumb-sm:nth-child(1) { animation-delay: 0.1s; }
+.video-thumb-sm:nth-child(2) { animation-delay: 0.2s; }
+.video-thumb-sm:nth-child(3) { animation-delay: 0.3s; }

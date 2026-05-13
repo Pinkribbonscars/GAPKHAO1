@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GAPKHAO - Explore Thai Street Food Routes" />
+  <title>Explore | GAPKHAO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Kanit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Leaflet CSS for Interactive Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/explore-new.css" />
+  <link rel="stylesheet" href="css/language-switcher-cn.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-fist">👊</span>
+        <span class="logo-text">GAPKHAO</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-translate="navbar.home">Home</a>
+        <a href="explore.html" class="nav-link nav-link--active" data-translate="navbar.explore">Explore</a>
+        <a href="street-food.html" class="nav-link" data-translate="navbar.streetFood">Street Food</a>
+        <a href="stories.html" class="nav-link" data-translate="navbar.stories">Stories</a>
+        <a href="blogs.html" class="nav-link" data-translate="navbar.blogs">Blogs</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn active" data-lang="th">ไทย</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+
+  <main style="padding-top: 80px;">
+
+    <!-- ========== EXPLORE - NEW DESIGN ========== -->
+    <section class="explore-new-section">
+      
+      <!-- Left Sidebar -->
+      <aside class="explore-sidebar">
+        <!-- Search Bar -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="ค้นหาสถานที่..." id="searchInput" data-translate-placeholder="explore.searchPlaceholder" />
+        </div>
+
+        <!-- Location Cards -->
+        <div class="location-cards" id="locationCards">
+          <!-- Cards will be loaded from config/explore-config.json -->
+          <p style="text-align: center; padding: 20px; color: #666;">Loading locations...</p>
+        </div>
+      </aside>
+
+      <!-- Right Map -->
+      <div class="explore-map-container">
+        <div id="map" class="map-full"></div>
+        
+        <!-- Location Detail Panel -->
+        <div class="location-detail-panel" id="locationDetailPanel">
+          <button class="detail-close-btn" id="closeDetailPanel" data-translate="explore.backBtn">← กลับ</button>
+          
+          <div class="detail-panel-content">
+            <div class="detail-header">
+              <div class="detail-icon" id="detailIcon">🍜</div>
+              <div class="detail-title-group">
+                <h2 class="detail-title" id="detailTitle">ก๋วยจั๊บนายเอ็ก</h2>
+                <p class="detail-subtitle" id="detailSubtitle">(Nai Ek Roll Noodle)</p>
+              </div>
+            </div>
+            
+            <div class="detail-meta-row">
+              <span class="detail-area" id="detailArea">เยาวราช</span>
+              <span class="detail-rating" id="detailRating">⭐ 3.9</span>
+            </div>
+            
+            <div class="detail-hours" id="detailHours">
+              เปิดอยู่จนถึง 23:59
+            </div>
+            
+            <div class="detail-section">
+              <h3 class="detail-section-title" data-translate="explore.addressTitle">ที่อยู่</h3>
+              <p class="detail-address" id="detailAddress">
+                ถนนเยาวราช (ปากซอยเยาวราช 9)<br>
+                อยู่ด้านซ้ายมือของถนนเยาวราช<br>
+                เยื้องๆกับโรงแรม Royal Hotel Bangkok
+              </p>
+            </div>
+            
+            <div class="detail-section">
+              <h3 class="detail-section-title" data-translate="explore.transportTitle">การเดินทาง</h3>
+              <div class="detail-transport">
+                <div class="transport-item">
+                  <span class="transport-icon">🚇</span>
+                  <span>200 ม. จาก MRT วัดมังกร</span>
+                </div>
+                <div class="transport-item">
+                  <span class="transport-icon">🚇</span>
+                  <span>800 ม. จาก MRT หัวลำโพง</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="detail-section">
+              <h3 class="detail-section-title"><span data-translate="explore.phoneTitle">เบอร์โทร</span> : <span id="detailPhone">022264651</span></h3>
+            </div>
+            
+            <div class="detail-images" id="detailImages">
+              <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?w=400&q=80" alt="Food 1" />
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="Food 2" />
+              <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80" alt="Food 3" />
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80" alt="Food 4" />
+            </div>
+            
+            <button class="start-walking-btn" id="startWalkingBtn">
+              <span class="walking-icon">🚶</span>
+              <span class="walking-text" data-translate="explore.startWalking">เริ่มเดินทาง</span>
+              <span class="walking-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo--light">
+          <span class="logo-fist">👊</span>
+          <span class="logo-text">GAPKHAO</span>
+        </a>
+        <p data-translate="footer.tagline">ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ ✨</p>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4 data-translate="footer.about">ABOUT</h4>
+          <a href="#" data-translate="footer.aboutUs">About us</a>
+          <a href="contact.html" data-translate="footer.contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-translate="footer.explore">EXPLORE</h4>
+          <a href="explore.html" data-translate="footer.route">Route</a>
+          <a href="street-life.html" data-translate="footer.streetLife">Street life</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-translate="footer.stories">STORIES</h4>
+          <a href="stories.html" data-translate="footer.video">Video</a>
+          <a href="blogs.html" data-translate="footer.blog">Blog</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p data-translate="footer.copyright">© 2026 GAPKHAO · All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Leaflet JS for Interactive Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/config-loader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/explore-new.js"></script>
+  <script src="js/language-switcher-cn.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GAPKHAO - ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ | Thai Street Culture, Food & Art" />
+  <title>GAPKHAO | ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Kanit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/homepage-sections.css" />
+  <link rel="stylesheet" href="css/trending-curiosity.css" />
+  <link rel="stylesheet" href="css/language-switcher-cn.css" />
+  <link rel="stylesheet" href="css/street-life-stories.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-fist">👊</span>
+        <span class="logo-text">GAPKHAO</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link nav-link--active" data-translate="navbar.home">Home</a>
+        <a href="explore.html" class="nav-link" data-translate="navbar.explore">Explore</a>
+        <a href="street-food.html" class="nav-link" data-translate="navbar.streetFood">Street Food</a>
+        <a href="stories.html" class="nav-link" data-translate="navbar.stories">Stories</a>
+        <a href="blogs.html" class="nav-link" data-translate="navbar.blogs">Blogs</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn active" data-lang="th">ไทย</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-img-grid">
+          <div class="hero-img-cell" style="background-image:url('images/street-food-1.jpg')"></div>
+          <div class="hero-img-cell" style="background-image:url('images/street-food-2.jpg')"></div>
+          <div class="hero-img-cell" style="background-image:url('images/street-food-3.jpg')"></div>
+          <div class="hero-img-cell" style="background-image:url('images/street-food-4.jpg')"></div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal" data-translate="hero.eyebrow">THAI STREET CULTURE</p>
+        <h1 class="hero-headline reveal delay-1" data-translate="hero.headline">"Every Street<br />Has a Story."</h1>
+        <p class="hero-tagline reveal delay-2" data-translate="hero.tagline">ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ<br />สัมผัสวิถีไทย อาหาร ศิลปะ ผู้คน ✨</p>
+        <div class="hero-cta reveal delay-3">
+          <a href="explore.html" class="btn btn--primary" data-translate="hero.exploreBtn">EXPLORE →</a>
+          <button class="btn btn--outline" id="recommendPlacesBtn" data-translate="hero.recommendBtn">RECOMMEND PLACES</button>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span data-translate="hero.scroll">scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ========== SOFT POWER STRIP ========== -->
+    <section class="ticker-strip">
+      <div class="ticker-track">
+        <span>อาหารไทย</span><span class="ticker-dot">✦</span>
+        <span>ศิลปะไทย</span><span class="ticker-dot">✦</span>
+        <span>วัฒนธรรมไทย</span><span class="ticker-dot">✦</span>
+        <span>Thai Soft Power</span><span class="ticker-dot">✦</span>
+        <span>Street Food</span><span class="ticker-dot">✦</span>
+        <span>ย่านเก่า</span><span class="ticker-dot">✦</span>
+        <span>วิถีชีวิต</span><span class="ticker-dot">✦</span>
+        <span>อาหารไทย</span><span class="ticker-dot">✦</span>
+        <span>ศิลปะไทย</span><span class="ticker-dot">✦</span>
+        <span>วัฒนธรรมไทย</span><span class="ticker-dot">✦</span>
+        <span>Thai Soft Power</span><span class="ticker-dot">✦</span>
+        <span>Street Food</span><span class="ticker-dot">✦</span>
+        <span>ย่านเก่า</span><span class="ticker-dot">✦</span>
+        <span>วิถีชีวิต</span><span class="ticker-dot">✦</span>
+      </div>
+    </section>
+
+    <!-- ========== MUST-TRY DISHES (4 COLUMNS) ========== -->
+    <section class="must-try-section" id="must-try">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-translate="mustTry.title">Must-Try Dishes</h2>
+        </div>
+
+        <div class="dishes-grid">
+          <article class="dish-card">
+            <div class="dish-image">
+              <img src="must-try-images/pad-thai.jpg" onerror="this.src='https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80'" alt="Pad Thai" />
+            </div>
+            <div class="dish-content">
+              <h3 data-translate="dishes.padThai.th">ผัดไทย</h3>
+              <h4 data-translate="dishes.padThai.en">Pad Thai</h4>
+              <button class="find-near-btn" data-translate="dishes.findBtn">🔍 Find Near Me</button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image">
+              <img src="must-try-images/som-tam.jpg" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80'" alt="Som Tam" />
+            </div>
+            <div class="dish-content">
+              <h3 data-translate="dishes.somTam.th">ส้มตำ</h3>
+              <h4 data-translate="dishes.somTam.en">Som Tam</h4>
+              <button class="find-near-btn" data-translate="dishes.findBtn">🔍 Find Near Me</button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image">
+              <img src="must-try-images/boat-noodles.jpg" onerror="this.src='https://images.unsplash.com/photo-1612874742237-415c69f18133?w=600&q=80'" alt="Boat Noodles" />
+            </div>
+            <div class="dish-content">
+              <h3 data-translate="dishes.boatNoodles.th">ก๋วยเตี๋ยวเรือ</h3>
+              <h4 data-translate="dishes.boatNoodles.en">Boat Noodles</h4>
+              <button class="find-near-btn" data-translate="dishes.findBtn">🔍 Find Near Me</button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image">
+              <img src="must-try-images/mango-sticky-rice.jpg" onerror="this.src='https://images.unsplash.com/photo-1599599810694-b5ac4dd64b73?w=600&q=80'" alt="Mango Sticky Rice" />
+            </div>
+            <div class="dish-content">
+              <h3 data-translate="dishes.mangoRice.th">ข้าวเหนียวมะม่วง</h3>
+              <h4 data-translate="dishes.mangoRice.en">Mango Sticky Rice</h4>
+              <button class="find-near-btn" data-translate="dishes.findBtn">🔍 Find Near Me</button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image">
+              <img src="https://images.unsplash.com/photo-1569562211093-4ed0d0758f12?w=600&q=80" alt="Suki" />
+            </div>
+            <div class="dish-content">
+              <h3 data-translate="dishes.suki.th">สุกี้</h3>
+              <h4 data-translate="dishes.suki.en">Chicken Sukiyaki Noodles</h4>
+              <button class="find-near-btn" data-translate="dishes.findBtn">🔍 Find Near Me</button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image">
+              <img src="https://images.unsplash.com/photo-1529563021893-cc83c992d75d?w=600&q=80" alt="Moo Satay" />
+            </div>
+            <div class="dish-content">
+              <h3 data-translate="dishes.satay.th">หมูสะเต๊ะ</h3>
+              <h4 data-translate="dishes.satay.en">Grilled Pork Satay</h4>
+              <button class="find-near-btn" data-translate="dishes.findBtn">🔍 Find Near Me</button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image">
+              <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?w=600&q=80" alt="Guay Jab" />
+            </div>
+            <div class="dish-content">
+              <h3 data-translate="dishes.guayJab.th">ก๋วยจั๊บ</h3>
+              <h4 data-translate="dishes.guayJab.en">Rolled Rice Noodles Soup</h4>
+              <button class="find-near-btn" data-translate="dishes.findBtn">🔍 Find Near Me</button>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image">
+              <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80" alt="Pad Pak Bung" />
+            </div>
+            <div class="dish-content">
+              <h3 data-translate="dishes.padPakBung.th">ผัดผักบุ้ง</h3>
+              <h4 data-translate="dishes.padPakBung.en">Wok Fried Morning Glory</h4>
+              <button class="find-near-btn" data-translate="dishes.findBtn">🔍 Find Near Me</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TWO-PANEL ROW: MAP & TIPS ========== -->
+    <section class="two-panel-row">
+      <!-- Left Panel: Trending Destinations -->
+      <div class="trending-panel">
+        <h2 data-translate="trending.title">Trending Street Food Destinations</h2>
+        
+        <!-- Decorative Jasmine Flowers -->
+        <div class="jasmine-flower flower-1"></div>
+        <div class="jasmine-flower flower-2"></div>
+        <div class="jasmine-flower flower-3"></div>
+        
+        <!-- Decorative Kranok Motifs -->
+        <div class="kranok-motif kranok-1">🌿</div>
+        <div class="kranok-motif kranok-2">🌿</div>
+        
+        <div class="bangkok-map">
+          <div class="river-path"></div>
+          
+          <!-- Temple Spires -->
+          <div class="temple-spire spire-1"></div>
+          <div class="temple-spire spire-2"></div>
+          <div class="temple-spire spire-3"></div>
+          
+          <div class="location-pin pin-chinatown">
+            <div class="pin-label">Chinatown</div>
+          </div>
+          
+          <div class="location-pin pin-center">
+            <div class="pin-label">Food Staller</div>
+          </div>
+          
+          <div class="location-pin pin-right">
+            <div class="pin-label">Street Lamp</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel: Tips -->
+      <div class="tips-panel">
+        <!-- Decorative Icons -->
+        <div class="tiffin-carrier">🍱</div>
+        <div class="wok-icon">🍳</div>
+        
+        <div class="section-label" data-translate="curiosity.label">Tips & Etiquette</div>
+        <h2 data-translate="curiosity.title">Curiosity Counter</h2>
+        
+        <div class="curiosity-frame">
+          <div class="curiosity-content">
+            <ul>
+              <li data-translate="curiosity.tip1">Repeat the menu and say "หนึ่งที่" (one plate)</li>
+              <li data-translate="curiosity.tip2">Adjust spice level: "ไม่เผ็ด" (not spicy) to "เผ็ดมาก" (very spicy)</li>
+              <li data-translate="curiosity.tip3">Use table condiments to customize your dish</li>
+              <li data-translate="curiosity.tip4">Long queues = delicious food worth waiting for</li>
+              <li data-translate="curiosity.tip5">Cash is king at most street stalls</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Bronze Food Icons -->
+        <div class="food-icons">
+          <div class="food-icon">🧺</div>
+          <div class="food-icon">☕</div>
+          <div class="food-icon">🍳</div>
+          <div class="food-icon">🍲</div>
+        </div>
+        
+        <div class="price-tag" data-translate="curiosity.price">Price: 40-100฿</div>
+      </div>
+    </section>
+
+    <!-- ========== BOTTOM TWO-PANEL ROW: RECOMMEND PLACES & COMMUNITY ========== -->
+    <section class="bottom-two-panel" id="recommendPlaces">
+      <!-- Left Panel: Recommend Places -->
+      <div class="planner-panel">
+        <div class="section-label" data-translate="recommend.label">Recommend Places</div>
+        <h2 data-translate="recommend.title">Voice of the Street</h2>
+        
+        <div class="tuktuk">
+          <div class="tuktuk-roof"></div>
+          <div class="tuktuk-body"></div>
+          <div class="tuktuk-wheel"></div>
+          <div class="tuktuk-wheel"></div>
+        </div>
+        
+        <div class="places-card">
+          <div class="places-header" data-translate="recommend.header">📍 6 Amazing Places</div>
+          
+          <a href="#" class="place-item" data-place-id="1">
+            <div class="place-icon">🍜</div>
+            <div class="place-info">
+              <div class="place-name" data-translate="recommend.place1.name">ก๋วยจั๊บนายเอ็ก</div>
+              <div class="place-meta" data-translate="recommend.place1.meta">เยาวราช · ⭐ 3.9</div>
+            </div>
+          </a>
+          
+          <a href="#" class="place-item" data-place-id="2">
+            <div class="place-icon">🍝</div>
+            <div class="place-info">
+              <div class="place-name" data-translate="recommend.place2.name">เปิดป่าพริกไทย</div>
+              <div class="place-meta" data-translate="recommend.place2.meta">ท่าเตียน · ⭐ 4.2</div>
+            </div>
+          </a>
+          
+          <a href="#" class="place-item" data-place-id="3">
+            <div class="place-icon">🥘</div>
+            <div class="place-info">
+              <div class="place-name" data-translate="recommend.place3.name">ย่านสตรีทฟู้ด ตลาดน้อย</div>
+              <div class="place-meta" data-translate="recommend.place3.meta">สตรีทฟู้ด · ⭐ 4.5</div>
+            </div>
+          </a>
+          
+          <a href="#" class="place-item" data-place-id="4">
+            <div class="place-icon">🥟</div>
+            <div class="place-info">
+              <div class="place-name" data-translate="recommend.place4.name">ติ่มซำจีนแท้</div>
+              <div class="place-meta" data-translate="recommend.place4.meta">เยาวราช · ⭐ 4.1</div>
+            </div>
+          </a>
+          
+          <a href="#" class="place-item" data-place-id="5">
+            <div class="place-icon">🍗</div>
+            <div class="place-info">
+              <div class="place-name" data-translate="recommend.place5.name">โกโก้ข้าวมันไก่ประตูน้ำ</div>
+              <div class="place-meta" data-translate="recommend.place5.meta">ประตูน้ำ · ⭐ 4.7</div>
+            </div>
+          </a>
+          
+          <a href="#" class="place-item" data-place-id="6">
+            <div class="place-icon">🍲</div>
+            <div class="place-info">
+              <div class="place-name" data-translate="recommend.place6.name">ก๋วยเตี๋ยวเรือวัดระเบียบ</div>
+              <div class="place-meta" data-translate="recommend.place6.meta">ธนบุรี · ⭐ 4.6</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Panel: Community Memory Wall -->
+      <div class="community-panel">
+        <div class="section-label" data-translate="community.label">Community</div>
+        <h2 data-translate="community.title">Voice of the Street</h2>
+        <div class="subtitle" data-translate="community.subtitle">6 เสียงของ Street Food</div>
+        
+        <div class="memory-wall">
+          <div class="polaroid-card street-story-card" data-story-id="voice-resilience" onclick="window.openStory('voice-resilience')">
+            <div class="polaroid-image">
+              <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=300&q=80" alt="Voice of Resilience" />
+            </div>
+            <div class="polaroid-title" data-translate="stories.resilience">Voice of Resilience</div>
+          </div>
+          
+          <div class="polaroid-card street-story-card" data-story-id="voice-accessibility" onclick="window.openStory('voice-accessibility')">
+            <div class="polaroid-image">
+              <img src="https://www.prachachat.net/wp-content/uploads/2020/09/IMG_2852.jpg" alt="Voice of Accessibility" />
+            </div>
+            <div class="polaroid-title" data-translate="stories.accessibility">Voice of Accessibility</div>
+          </div>
+          
+          <div class="polaroid-card street-story-card" data-story-id="voice-heritage" onclick="window.openStory('voice-heritage')">
+            <div class="polaroid-image">
+              <img src="https://www.salika.co/wp-content/uploads/2018/11/shutterstock_1130007947.jpg" alt="Voice of Heritage" />
+            </div>
+            <div class="polaroid-title" data-translate="stories.heritage">Voice of Heritage</div>
+          </div>
+          
+          <div class="polaroid-card street-story-card" data-story-id="voice-fusion" onclick="window.openStory('voice-fusion')">
+            <div class="polaroid-image">
+              <img src="https://www.amazingadventurebangkok.com/wp-content/uploads/2021/08/1.jpg" alt="Voice of Fusion" />
+            </div>
+            <div class="polaroid-title" data-translate="stories.fusion">Voice of Fusion</div>
+          </div>
+          
+          <div class="polaroid-card street-story-card" data-story-id="voice-innovation" onclick="window.openStory('voice-innovation')">
+            <div class="polaroid-image">
+              <img src="https://www.salika.co/wp-content/uploads/2023/11/thai-streetfood-local-travel-life.webp" alt="Voice of Innovation" />
+            </div>
+            <div class="polaroid-title" data-translate="stories.innovation">Voice of Innovation</div>
+          </div>
+          
+          <div class="polaroid-card street-story-card" data-story-id="voice-global" onclick="window.openStory('voice-global')">
+            <div class="polaroid-image">
+              <img src="https://i.ytimg.com/vi/oKCuIeHDw-o/hq720.jpg" alt="Voice of Global" />
+            </div>
+            <div class="polaroid-title" data-translate="stories.global">Voice of Global Citizen</div>
+          </div>
+        </div>
+        
+        <!-- Data Sources -->
+        <div class="data-sources">
+          <h4 data-translate="sources.title">ขอบคุณข้อมูลจาก</h4>
+          <ul>
+            <li>WIEGO (Women in Informal Employment: Globalizing and Organizing)</li>
+            <li>FAO (Food and Agriculture Organization of the United Nations)</li>
+            <li>Michelin Guide Thailand</li>
+            <li>สถาบันไทยคดีศึกษา (Thai Studies Institute)</li>
+            <li>ศูนย์วิจัยกสิกรไทย (Kasikorn Research Center)</li>
+            <li>CNN Travel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo--light">
+          <span class="logo-fist">👊</span>
+          <span class="logo-text">GAPKHAO</span>
+        </a>
+        <p data-translate="footer.tagline">ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ ✨</p>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4 data-translate="footer.about">ABOUT</h4>
+          <a href="#" data-translate="footer.aboutUs">About us</a>
+          <a href="contact.html" data-translate="footer.contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-translate="footer.explore">EXPLORE</h4>
+          <a href="explore.html" data-translate="footer.route">Route</a>
+          <a href="street-life.html" data-translate="footer.streetLife">Street life</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-translate="footer.stories">STORIES</h4>
+          <a href="stories.html" data-translate="footer.video">Video</a>
+          <a href="blogs.html" data-translate="footer.blog">Blog</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p data-translate="footer.copyright">© 2026 GAPKHAO · All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/homepage-sections.js"></script>
+  <script src="js/trending-navigation.js"></script>
+  <script src="js/language-switcher-cn.js"></script>
+  <script src="js/street-life-stories.js"></script>
+</body>
+</html>

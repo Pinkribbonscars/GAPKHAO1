@@ -1,0 +1,26 @@
+{
+  "itemsPerCategory": 3,
+  "linkToExplore": true,
+  "categories": {
+    "main": [
+      "khao-man-gai",
+      "charoen-saeng",
+      "prajak-ped"
+    ],
+    "dessert": [
+      "ka-pai",
+      "bua-loy",
+      "khanom-buang"
+    ],
+    "snack": [
+      "moo-ping",
+      "look-chin",
+      "guay-jub-stereo"
+    ],
+    "noodle": [
+      "thip-samai",
+      "toy-tuay",
+      "yen-ta-fo"
+    ]
+  }
+}

@@ -12,7 +12,6 @@ let activeMarker = null;
 const bangkokCenter = [13.7563, 100.5018];
 
 // Location data with full details
-// NOTE: This will be overridden by config if window.exploreConfigLocations exists
 let locationsData = [
   {
     id: 1,

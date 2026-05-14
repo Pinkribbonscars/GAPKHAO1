@@ -269,7 +269,7 @@ window.addEventListener('load', () => {
 $$('.find-near-btn').forEach(btn => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.href = 'explore.html';
+    window.location.href = 'street-food.html';
     showToast('🗺️ กำลังค้นหาร้านใกล้คุณ...');
   });
 });

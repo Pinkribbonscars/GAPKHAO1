@@ -521,9 +521,19 @@ function showDetailPanel(location) {
   
   // Update images
   const imagesHTML = location.images.map(img => 
-    `<img src="${img}" alt="${currentLang === 'zh' ? location.titleZh : location.title}" />`
+    `<img src="${img}" alt="${currentLang === 'zh' ? location.titleZh : location.title}" class="detail-image-clickable" />`
   ).join('');
   document.getElementById('detailImages').innerHTML = imagesHTML;
+  
+  // Add click handlers for lightbox
+  setTimeout(() => {
+    const images = document.querySelectorAll('#detailImages img');
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        openLightbox(location.images, index);
+      });
+    });
+  }, 100);
   
   // Show panel
   panel.classList.add('active');
@@ -773,3 +783,101 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
   }
 });
+
+
+// ========== LIGHTBOX FUNCTIONALITY ==========
+
+let currentLightboxImages = [];
+let currentLightboxIndex = 0;
+
+function openLightbox(images, startIndex = 0) {
+  currentLightboxImages = images;
+  currentLightboxIndex = startIndex;
+  
+  // Create lightbox if it doesn't exist
+  let lightbox = document.getElementById('imageLightbox');
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'imageLightbox';
+    lightbox.className = 'image-lightbox';
+    lightbox.innerHTML = `
+      <div class="lightbox-overlay"></div>
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous">‹</button>
+        <button class="lightbox-next" aria-label="Next">›</button>
+        <img class="lightbox-image" src="" alt="Location image" />
+        <div class="lightbox-counter"></div>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+    
+    // Add event listeners
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.querySelector('.lightbox-overlay').addEventListener('click', closeLightbox);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', showPrevImage);
+    lightbox.querySelector('.lightbox-next').addEventListener('click', showNextImage);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', handleLightboxKeyboard);
+  }
+  
+  // Show lightbox
+  updateLightboxImage();
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('imageLightbox');
+  if (lightbox) {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function showPrevImage() {
+  currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+  updateLightboxImage();
+}
+
+function showNextImage() {
+  currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+  updateLightboxImage();
+}
+
+function updateLightboxImage() {
+  const lightbox = document.getElementById('imageLightbox');
+  if (!lightbox) return;
+  
+  const img = lightbox.querySelector('.lightbox-image');
+  const counter = lightbox.querySelector('.lightbox-counter');
+  
+  img.src = currentLightboxImages[currentLightboxIndex];
+  counter.textContent = `${currentLightboxIndex + 1} / ${currentLightboxImages.length}`;
+  
+  // Show/hide navigation buttons
+  const prevBtn = lightbox.querySelector('.lightbox-prev');
+  const nextBtn = lightbox.querySelector('.lightbox-next');
+  
+  if (currentLightboxImages.length <= 1) {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  } else {
+    prevBtn.style.display = 'flex';
+    nextBtn.style.display = 'flex';
+  }
+}
+
+function handleLightboxKeyboard(e) {
+  const lightbox = document.getElementById('imageLightbox');
+  if (!lightbox || !lightbox.classList.contains('active')) return;
+  
+  if (e.key === 'Escape') {
+    closeLightbox();
+  } else if (e.key === 'ArrowLeft') {
+    showPrevImage();
+  } else if (e.key === 'ArrowRight') {
+    showNextImage();
+  }
+}

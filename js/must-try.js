@@ -77,21 +77,13 @@
       button.addEventListener('click', function(e) {
         e.preventDefault();
         
-        // Get dish name from card
-        const dishCard = this.closest('.dish-card');
-        const dishNameThai = dishCard.querySelector('h3').textContent;
-        const dishNameEng = dishCard.querySelector('h4').textContent;
-        
-        // Show toast notification
-        showToast(`🔍 กำลังค้นหา ${dishNameThai} ใกล้คุณ...`);
-        
         // Add ripple effect
         createRipple(e, this);
         
-        // Simulate finding nearby (you can replace with actual geolocation logic)
+        // Navigate to street food page
         setTimeout(() => {
-          showToast(`✨ พบร้าน ${dishNameThai} 3 แห่งใกล้คุณ!`);
-        }, 1500);
+          window.location.href = 'street-food.html';
+        }, 300);
       });
     });
   }

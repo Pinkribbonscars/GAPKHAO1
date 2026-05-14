@@ -5,7 +5,14 @@
 
 /* ── Blogs Hero Section ────────────────────────────────────────── */
 .blogs-hero {
-  background: linear-gradient(135deg, var(--color-header) 0%, #3d3530 100%);
+  background: linear-gradient(
+    rgba(61, 53, 48, 0.85),
+    rgba(61, 53, 48, 0.85)
+  ),
+  url('https://siam.recipes/cdn/shop/articles/Bangkok_street_food_520x.jpg?v=1731896246');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 6rem 2rem 4rem;
   text-align: center;
   position: relative;

@@ -68,19 +68,13 @@
       button.addEventListener('click', function(e) {
         e.preventDefault();
         
-        const card = this.closest('.dish-card');
-        const dishName = card.querySelector('h3').textContent;
-        
         // Add ripple effect
         createRipple(e, this);
         
-        // Show notification
-        showToast(`🔍 Finding ${dishName} near you...`);
-        
-        // Simulate search
+        // Navigate to street food page
         setTimeout(() => {
-          showToast(`✨ Found 3 places serving ${dishName}!`);
-        }, 1500);
+          window.location.href = 'street-food.html';
+        }, 300);
       });
     });
   }

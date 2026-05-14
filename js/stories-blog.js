@@ -596,6 +596,15 @@ class BlogModal {
     // Add close button handler
     const closeBtn = this.overlay.querySelector('.blog-close-btn');
     closeBtn.addEventListener('click', () => this.close());
+
+    // Ensure all links in blog-references are clickable
+    const referenceLinks = this.overlay.querySelectorAll('.blog-references a');
+    referenceLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent event bubbling
+        // Link will navigate normally due to href attribute
+      });
+    });
   }
 }
 

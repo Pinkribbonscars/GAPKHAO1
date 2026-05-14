@@ -222,35 +222,106 @@
 
 
 // ══════════════════════════════════════════════════════════════
-// RECOMMEND PLACES - Navigate to Explore Page with Location
+// RECOMMEND PLACES - Populate with Random Street Food Items
 // ══════════════════════════════════════════════════════════════
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Street food data matching street-food.js
+  const allFoodItems = [
+    // Main dishes
+    { id: 5, name: 'โกอ่างข้าวมันไก่ประตูน้ำ', nameZh: '水门海南鸡饭', location: 'ประตูน้ำ', locationZh: '水门', rating: 4.5, icon: '🍗', lat: 13.749643, lng: 100.542096 },
+    { id: 6, name: 'ลาบเป็ดนายหนอม', nameZh: '乃诺鸭肉沙拉', location: 'ดินแดง', locationZh: '丁当', rating: 4.0, icon: '🦆', lat: 13.778884, lng: 100.56332 },
+    { id: 4, name: 'เสียวหลัง', nameZh: '背痛', location: 'ปากคลองตลาด', locationZh: '帕克隆塔拉特', rating: 3.8, icon: '🍚', lat: 13.752770, lng: 100.494746 },
+    // Desserts
+    { id: 7, name: 'ข้าวเหนียวมะม่วงป้าณี', nameZh: '阿妮芒果糯米饭', location: 'จอมทอง', locationZh: '宗通', rating: 4.4, icon: '🥭', lat: 13.702087, lng: 100.465379 },
+    { id: 8, name: 'เจ้วรรณสวนหลวงจุฬา', nameZh: '朱拉隆功皇家公园甜品', location: 'ปทุมวัน', locationZh: '巴吞旺', rating: 3.7, icon: '🍨', lat: 13.739625, lng: 100.522226 },
+    { id: 9, name: 'ปาท่องโก๋เสวย', nameZh: '油条咖啡馆', location: 'บางลำพู', locationZh: '邦兰普', rating: 3.7, icon: '🥖', lat: 13.761204, lng: 100.499545 },
+    // Snacks
+    { id: 10, name: 'หมูสะเต๊ะแปลงนาม', nameZh: '帕朗南猪肉沙爹', location: 'เยาวราช', locationZh: '耀华力', rating: 4.2, icon: '🍖', lat: 13.740678, lng: 100.509616 },
+    { id: 11, name: 'นายย้ง เจ้าเก่าสำเหร่', nameZh: '乃勇老店三赖', location: 'สำเหร่', locationZh: '三赖', rating: 4.2, icon: '🍨', lat: 13.713342, lng: 100.488770 },
+    { id: 12, name: 'ยุ้ยเผือกทอด เสาชิงช้า', nameZh: '油炸芋头摇摆柱', location: 'เสาชิงช้า', locationZh: '摇摆柱', rating: 4.0, icon: '🍠', lat: 13.753431, lng: 100.500519 },
+    // Noodles
+    { id: 1, name: 'ก๋วยจั๊บนายเอ็ก', nameZh: '乃艾卷粉', location: 'เยาวราช', locationZh: '耀华力', rating: 3.8, icon: '🍜', lat: 13.7563, lng: 100.5018 },
+    { id: 2, name: 'ก๋วยเตี๋ยวเรืออยุธยา', nameZh: '正宗大城船面', location: 'ดอนเมือง', locationZh: '廊曼', rating: 4.1, icon: '🍝', lat: 13.897445, lng: 100.587634 },
+    { id: 3, name: 'ทิพย์สมัย ผัดไทยประตูผี', nameZh: 'Thipsamai Pad Thai', location: 'พระนคร', locationZh: '帕那空', rating: 3.7, icon: '🥘', lat: 13.7308, lng: 100.5214 }
+  ];
+  
+  // Select first 6 items (not random)
+  const selectedSix = allFoodItems.slice(0, 6);
+  
+  // Get current language
+  const currentLang = window.currentLanguage ? window.currentLanguage() : 'th';
+  
+  // Update place items
   const placeItems = document.querySelectorAll('.place-item');
+  placeItems.forEach((item, index) => {
+    if (selectedSix[index]) {
+      const food = selectedSix[index];
+      
+      // Update icon
+      const iconEl = item.querySelector('.place-icon');
+      if (iconEl) iconEl.textContent = food.icon;
+      
+      // Update name
+      const nameEl = item.querySelector('.place-name');
+      if (nameEl) {
+        nameEl.textContent = currentLang === 'zh' ? food.nameZh : food.name;
+        nameEl.removeAttribute('data-translate'); // Remove translation attribute
+      }
+      
+      // Update meta (location and rating)
+      const metaEl = item.querySelector('.place-meta');
+      if (metaEl) {
+        const location = currentLang === 'zh' ? food.locationZh : food.location;
+        metaEl.textContent = `${location} · ⭐ ${food.rating}`;
+        metaEl.removeAttribute('data-translate'); // Remove translation attribute
+      }
+      
+      // Store location data
+      item.setAttribute('data-location-id', food.id);
+      item.setAttribute('data-lat', food.lat);
+      item.setAttribute('data-lng', food.lng);
+    }
+  });
   
-  // Map place IDs to location data from explore page
-  const placeLocations = {
-    '1': { lat: 13.7563, lng: 100.5018 }, // ก๋วยจั๊บนายเอ็ก
-    '2': { lat: 13.7440, lng: 100.5255 }, // เปิดป่าพริกไทย
-    '3': { lat: 13.7308, lng: 100.5214 }, // ย่านสตรีทฟู้ด ตลาดน้อย
-    '4': { lat: 13.7650, lng: 100.5380 }, // ติ่มซำจีนแท้
-    '5': { lat: 13.7501, lng: 100.5413 }, // โกโก้ข้าวมันไก่ประตูน้ำ
-    '6': { lat: 13.7289, lng: 100.4877 }  // ก๋วยเตี๋ยวเรือวัดระเบียบ
-  };
-  
+  // Add click handlers to navigate to explore page
   placeItems.forEach(item => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
-      const placeId = item.getAttribute('data-place-id');
-      const location = placeLocations[placeId];
+      const locationId = item.getAttribute('data-location-id');
+      const lat = item.getAttribute('data-lat');
+      const lng = item.getAttribute('data-lng');
       
-      if (location) {
-        // Store GPS coordinates in sessionStorage
-        sessionStorage.setItem('exploreLocationLat', location.lat);
-        sessionStorage.setItem('exploreLocationLng', location.lng);
+      if (locationId && lat && lng) {
+        // Store location ID and coordinates in sessionStorage
+        sessionStorage.setItem('exploreLocationId', locationId);
+        sessionStorage.setItem('exploreLocationLat', lat);
+        sessionStorage.setItem('exploreLocationLng', lng);
         
         // Navigate to explore page
         window.location.href = 'explore.html';
+      }
+    });
+  });
+  
+  // Update on language change
+  window.addEventListener('languageChanged', () => {
+    const currentLang = window.currentLanguage ? window.currentLanguage() : 'th';
+    placeItems.forEach((item, index) => {
+      if (selectedSix[index]) {
+        const food = selectedSix[index];
+        const nameEl = item.querySelector('.place-name');
+        if (nameEl) {
+          nameEl.textContent = currentLang === 'zh' ? food.nameZh : food.name;
+          nameEl.removeAttribute('data-translate');
+        }
+        
+        const metaEl = item.querySelector('.place-meta');
+        if (metaEl) {
+          const location = currentLang === 'zh' ? food.locationZh : food.location;
+          metaEl.textContent = `${location} · ⭐ ${food.rating}`;
+          metaEl.removeAttribute('data-translate');
+        }
       }
     });
   });

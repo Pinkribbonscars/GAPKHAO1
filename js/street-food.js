@@ -6,668 +6,272 @@
 (function() {
   'use strict';
 
-  // Food Data - Starting with Main Dishes Category (9 items)
+  // Food Data - Populated from explore-new.js locations
   const foodData = {
     main: [
+      // ID 5 - โกอ่างข้าวมันไก่ประตูน้ำ
       {
         id: 'khao-man-gai',
-        name: 'โกโก้ข้าวมันไก่ประตูน้ำ',
-        nameEn: 'Khao Man Gai (Chicken Rice)',
-        nameZh: '海南鸡饭',
+        name: 'โกอ่างข้าวมันไก่ประตูน้ำ',
+        nameEn: 'GoAng Kaomunkai Pratunam',
+        nameZh: '水门海南鸡饭',
         category: 'main',
         location: 'ประตูน้ำ',
         locationZh: '水门',
-        lat: 13.7501,
-        lng: 100.5413,
-        rating: 4.7,
+        lat: 13.749643,
+        lng: 100.542096,
+        rating: 4.5,
         price: '50-80฿',
-        image: 'อาหารจานหลัก-img/โกโก้ข้าวมันไก่ประตูน้ำ-iimg.jpg',
+        image: 'https://img.wongnai.com/p/1920x0/2026/03/04/948e67503ec94a98a04db97467af739f.jpg',
         description: 'ข้าวมันไก่สูตรดั้งเดิม เนื้อไก่นุ่ม น้ำจิ้มรสเด็ด',
         descriptionZh: '传统海南鸡饭，鸡肉嫩滑，酱汁美味',
         phone: '02-252-6325',
-        hours: '06:00-14:00'
+        hours: '06:00-23:59',
+        address: '960-962 ซอยเพชรบุรี 30 ถนนเพชรบุรีตัดใหม่\nปากซ.เพชรบุรี 30 ใกล้แยก',
+        addressZh: '960-962 碧武里巷30号 碧武里新路\n碧武里巷30号入口附近'
       },
+      // ID 6 - ลาบเป็ดนายหนอม
       {
-        id: 'charoen-saeng',
-        name: 'ข้าวขาหมูสีมรกต',
-        nameEn: 'Khao Kha Moo Seemorakat',
-        nameZh: '翡翠猪腿饭',
+        id: 'larb-ped',
+        name: 'ลาบเป็ดนายหนอม',
+        nameEn: 'Lap Pet Nai Nom',
+        nameZh: '乃诺鸭肉沙拉',
         category: 'main',
-        location: 'สีลม',
-        locationZh: '石龙军',
-        lat: 13.7237,
-        lng: 100.5173,
-        rating: 4.5,
-        price: '60-120฿',
-        image: 'อาหารจานหลัก-img/ข้าวขาหมูสีมรกต-img.jpg',
-        description: 'อาหารไทยรสชาติต้นตำรับ บรรยากาศดี',
-        descriptionZh: '正宗泰国菜，氛围优雅',
-        phone: '02-234-5678',
-        hours: '10:00-22:00'
+        location: 'ดินแดง',
+        locationZh: '丁当',
+        lat: 13.778884,
+        lng: 100.56332,
+        rating: 4.0,
+        price: '70-120฿',
+        image: 'https://img.wongnai.com/p/1920x0/2023/07/12/a6d25cd076994b6bba63ac206d53d607.jpg',
+        description: 'ลาบเป็ดรสจัดจ้าน แซ่บนัวน้ำตาไหล',
+        descriptionZh: '鸭肉沙拉味道浓郁，超级辣',
+        phone: '026928489',
+        hours: '10:30-23:00',
+        address: '270/48, ซอยประชาสงเคราะห์ 27, ดินแดง, กรุงเทพมหานคร, 10400\nใกล้ม.หอการค้า ประมาณ 300 เมตร',
+        addressZh: '270/48, 巷 Pracha Songkhro 27, 丁当, 曼谷, 10400\n距离华侨崇圣大学约 300 米'
       },
+      // ID 4 - เสียวหลัง
       {
-        id: 'seemorakat',
-        name: 'ข้าวหมูแดงสีมรกตเผ็ดมาก',
-        nameEn: 'Khao Moo Daeng Seemorakat Spicy',
-        nameZh: '翡翠红猪肉饭很辣',
+        id: 'siew-lang',
+        name: 'เสียวหลัง',
+        nameEn: 'sĭieow lăng',
+        nameZh: '背痛',
         category: 'main',
-        location: 'สีมรกต',
-        locationZh: '翡翠区',
-        lat: 13.7363,
-        lng: 100.5152,
-        rating: 4.6,
-        price: '70-150฿',
-        image: 'อาหารจานหลัก-img/ข้าวหมูแดงสีมรกตเผ็ดมาก-img.jpg',
-        description: 'อาหารไทยสไตล์โฮมเมด รสชาติกลมกล่อม',
-        descriptionZh: '家常泰国菜，味道圆润',
-        phone: '02-245-7890',
-        hours: '11:00-21:00'
-      },
-      {
-        id: 'ped-mak',
-        name: 'กะเพราเผ็ดมาก',
-        nameEn: 'Krapow Ped Mak (Very Spicy Basil)',
-        nameZh: '罗勒很辣',
-        category: 'main',
-        location: 'เผ็ดมาก',
-        locationZh: '很辣区',
-        lat: 13.7199,
-        lng: 100.5849,
-        rating: 4.8,
-        price: '40-90฿',
-        image: 'อาหารจานหลัก-img/กะเพราเผ็ดมาก-img.jpg',
-        description: 'อาหารรสจัดจ้าน เผ็ดร้อนสะใจ สำหรับคนรักความเผ็ด',
-        descriptionZh: '超辣美食，适合喜欢辣的人',
-        phone: '02-256-1234',
-        hours: '10:00-20:00'
-      },
-      {
-        id: 'prajak-ped',
-        name: 'ประจักษ์เป็ดย่าง',
-        nameEn: 'Prajak Roasted Duck',
-        nameZh: '烤鸭店',
-        category: 'main',
-        location: 'ประจักษ์เป็ดย่าง',
-        locationZh: '烤鸭区',
-        lat: 13.7202,
-        lng: 100.5161,
-        rating: 4.9,
-        price: '80-180฿',
-        image: 'อาหารจานหลัก-img/ประจักษ์เป็ดย่าง-img.jpg',
-        description: 'เป็ดย่างหนังกรอบ เนื้อนุ่ม เปิดมากว่า 100 ปี',
-        descriptionZh: '烤鸭皮脆肉嫩，开业超过100年',
-        phone: '02-234-9876',
-        hours: '08:00-18:00'
-      },
-      {
-        id: 'aisa-rosdee',
-        name: 'ข้าวหมกไก่',
-        nameEn: 'Khao Mok Gai (Chicken Rice)',
-        nameZh: '鸡肉焖饭',
-        category: 'main',
-        location: 'ไอซา รสดี',
-        locationZh: '美味区',
-        lat: 13.7593,
-        lng: 100.4984,
-        rating: 4.4,
+        location: 'ปากคลองตลาด',
+        locationZh: '帕克隆塔拉特',
+        lat: 13.752770,
+        lng: 100.494746,
+        rating: 3.8,
         price: '50-100฿',
-        image: 'อาหารจานหลัก-img/ข้าวหมกไก่-img.jpg',
-        description: 'ข้าวหมกไก่สูตรดั้งเดิม หอมเครื่องเทศ เนื้อไก่นุ่ม',
-        descriptionZh: '传统鸡肉焖饭，香料芬芳，鸡肉嫩滑',
-        phone: '02-267-5432',
-        hours: '09:00-21:00'
-      },
-      {
-        id: 'khao-gaeng',
-        name: 'ข้าวแกงเจ๊กปุ๋ย',
-        nameEn: 'Khao Gaeng (Curry Rice)',
-        nameZh: '咖喱饭',
-        category: 'main',
-        location: 'ข้าวแกงเจ๊กปุ๋ย',
-        locationZh: '咖喱饭区',
-        lat: 13.7466,
-        lng: 100.5097,
-        rating: 4.6,
-        price: '40-80฿',
-        image: 'อาหารจานหลัก-img/ข้าวแกงเจ๊กปุ๋ย-img.jpg',
-        description: 'ข้าวราดแกงหลากหลายเมนู สดใหม่ทุกวัน',
-        descriptionZh: '多种咖喱饭，每天新鲜',
-        phone: '02-278-3456',
-        hours: '07:00-15:00'
-      },
-      {
-        id: 'joke-samyan',
-        name: 'โจ๊กสามย่าน',
-        nameEn: 'Joke Samyan (Rice Porridge)',
-        nameZh: '三燕粥',
-        category: 'main',
-        location: 'โจ๊กสามย่าน',
-        locationZh: '三燕',
-        lat: 13.7344,
-        lng: 100.5284,
-        rating: 4.7,
-        price: '30-70฿',
-        image: 'อาหารจานหลัก-img/โจ๊กสามย่าน-img.jpg',
-        description: 'โจ๊กหมูสูตรโบราณ เนื้อนุ่ม น้ำซุปเข้มข้น',
-        descriptionZh: '传统猪肉粥，肉嫩汤浓',
-        phone: '02-289-6789',
-        hours: '06:00-14:00'
-      },
-      {
-        id: 'gai-tod',
-        name: 'ไก่ทอดเจ๊ฮี (ชอบโปโล)',
-        nameEn: 'Fried Chicken',
-        nameZh: '炸鸡',
-        category: 'main',
-        location: 'ไก่ทอดเจ๊ฮี',
-        locationZh: '炸鸡区',
-        lat: 13.7335,
-        lng: 100.5458,
-        rating: 4.8,
-        price: '60-120฿',
-        image: 'อาหารจานหลัก-img/ไก่ทอดเจ๊ฮี (ชอบโปโล)-img.jpg',
-        description: 'ไก่ทอดกรอบนอกนุ่มใน เครื่องเทศหอมกรุ่น',
-        descriptionZh: '炸鸡外酥内嫩，香料芬芳',
-        phone: '02-290-1234',
-        hours: '10:00-22:00'
+        image: 'https://img.wongnai.com/p/1920x0/2021/02/20/83b3936bc46947cd8d0135416458f55b.jpg',
+        description: 'อาหารจีนโบราณ รสชาติต้นตำรับ',
+        descriptionZh: '传统中餐，正宗口味',
+        phone: '022227212',
+        hours: '10:00-20:00',
+        address: '227 ถนนอัษฎางค์ แขวงวังบูรพาฯ กรุงเทพมหานคร (ใช้ถนนอัษฎางค์ จากปากคลองตลาด มุ่งหน้าโรงเรียนราชินี ให้เลี้ยวซ้ายเข้าซอยเซเว่นอีเลฟเว่นตรงหัวมุมที่อยู่ติดสะพานคลองคูเมืองเดิม ตรงเข้าไปประมาณ 200 เมตรจะเห็นร้านเสียวหลัง ตั้งอยู่ในซอยเล็กๆ ด้านซ้ายมือ)',
+        addressZh: '地址：曼谷旺布拉帕区阿萨当路227号（从帕空塔拉特出发，沿阿萨当路朝拉吉尼学校方向行驶。在靠近旧孔库芒桥的拐角处，7-Eleven便利店旁边的小巷左转。直行约200米，您会在左侧的小巷里看到Siew Lang商店。）'
       }
     ],
     dessert: [
+      // ID 7 - ข้าวเหนียวมะม่วงป้าณี (same as main ID 7, but categorized as dessert)
       {
-        id: 'ka-pai',
-        name: 'ก พาย',
-        nameEn: 'Ka Pai (Thai Pie)',
-        nameZh: '泰式派',
+        id: 'mango-sticky-rice-dessert',
+        name: 'ข้าวเหนียวมะม่วงป้าณี (วัดราชโอรส)',
+        nameEn: 'Sweet sticky rice aunt nee',
+        nameZh: '阿妮芒果糯米饭（拉差欧罗寺）',
         category: 'dessert',
-        location: 'ก พาย',
-        locationZh: 'K派区',
-        lat: 13.7543,
-        lng: 100.4986,
-        rating: 4.6,
-        price: '30-60฿',
-        image: 'ของหวาน-img/ก พาย-img.jpg',
-        description: 'พายไทยสูตรโบราณ หอมเนยละมุน',
-        descriptionZh: '传统泰式派，黄油香浓',
-        phone: '02-301-2345',
-        hours: '08:00-18:00'
+        location: 'จอมทอง',
+        locationZh: '宗通',
+        lat: 13.702087,
+        lng: 100.465379,
+        rating: 4.4,
+        price: '60-120฿',
+        image: 'https://img.wongnai.com/p/1920x0/2024/03/22/ecbfaa047411426c8c546a40486b73e0.jpg',
+        description: 'ข้าวเหนียวมะม่วงสูตรต้นตำรับ มะม่วงหวานฉ่ำ',
+        descriptionZh: '正宗芒果糯米饭，芒果香甜多汁',
+        phone: '0909910651',
+        hours: '09:00-18:00',
+        address: '159 วุฒกาศ แขวงจอมทอง เขต จอมทอง กรุงเทพมหานคร 10150',
+        addressZh: '159 Wutthakat, 宗通区, 曼谷 10150'
       },
+      // ID 8 - เจ้วรรณสวนหลวงจุฬา
       {
-        id: 'bua-loy',
-        name: 'บัวลอยเทคูเก้า',
-        nameEn: 'Bua Loy (Sweet Dumplings)',
-        nameZh: '汤圆',
+        id: 'chao-wan',
+        name: 'เจ้วรรณสวนหลวงจุฬา',
+        nameEn: 'Chao Wan Suan Luang Chula',
+        nameZh: '朱拉隆功皇家公园甜品',
         category: 'dessert',
-        location: 'บัวลอยเทคูเก้า',
-        locationZh: '汤圆区',
-        lat: 13.7534,
-        lng: 100.4991,
-        rating: 4.7,
-        price: '25-50฿',
-        image: 'ของหวาน-img/บัวลอยเทคูเก้า-img.jpg',
-        description: 'บัวลอยงาดำน้ำขิง หวานมัน อุ่นท้อง',
-        descriptionZh: '黑芝麻汤圆配姜汤，香甜暖胃',
-        phone: '02-302-3456',
-        hours: '10:00-20:00'
+        location: 'ปทุมวัน',
+        locationZh: '巴吞旺',
+        lat: 13.739625,
+        lng: 100.522226,
+        rating: 3.7,
+        price: '30-70฿',
+        image: 'https://img.wongnai.com/p/1920x0/2025/12/19/0d039c95be924e86a7c6df8cd62cb5af.jpg',
+        description: 'ของหวานไทยโบราณ รสชาติต้นตำรับ',
+        descriptionZh: '传统泰式甜品，正宗口味',
+        phone: '081-421-3761',
+        hours: '10:00-13:30',
+        address: '1700, ถนนบรรทัดทอง รองเมือง ปทุมวัน กรุงเทพมหานคร\nตรงข้ามอุทยาน 100ปี จุฬา',
+        addressZh: '1700, 班塔通路, 荣木昂, 巴吞旺, 曼谷\n朱拉隆功大学100周年公园对面'
       },
-      {
-        id: 'khanom-buang',
-        name: 'ขนมเบื้องไทยขาวัง (แพร่งนรา)',
-        nameEn: 'Thai Crepe',
-        nameZh: '泰式薄饼',
-        category: 'dessert',
-        location: 'แพร่งนรา',
-        locationZh: '帕能那拉',
-        lat: 13.7531,
-        lng: 100.4975,
-        rating: 4.8,
-        price: '20-40฿',
-        image: 'ของหวาน-img/ขนมเบื้องไทยขาวัง (แพร่งนรา)-img.jpg',
-        description: 'ขนมเบื้องกรอบ ไส้ฝอยทอง หวานมัน',
-        descriptionZh: '脆皮薄饼，金丝馅料，香甜可口',
-        phone: '02-303-4567',
-        hours: '09:00-19:00'
-      },
+      // ID 9 - ปาท่องโก๋เสวย
       {
         id: 'patongko',
-        name: 'ปาท่องโก๋เสวย (เยาวราช)',
-        nameEn: 'Chinese Donut',
-        nameZh: '油条',
+        name: 'ปาท่องโก๋เสวย',
+        nameEn: 'Pa Tong Go Cafe',
+        nameZh: '油条咖啡馆',
         category: 'dessert',
-        location: 'เยาวราช',
-        locationZh: '耀华力',
-        lat: 13.7401,
-        lng: 100.5108,
-        rating: 4.9,
-        price: '15-35฿',
-        image: 'ของหวาน-img/ปาท่องโก๋เสวย (เยาวราช)-img.jpg',
+        location: 'บางลำพู',
+        locationZh: '邦兰普',
+        lat: 13.761204,
+        lng: 100.499545,
+        rating: 3.7,
+        price: '15-40฿',
+        image: 'https://img.wongnai.com/p/1920x0/2024/10/22/c27fa48383ec4f818522da1c7d89d251.jpg',
         description: 'ปาท่องโก๋กรอบนอกนุ่มใน จิ้มสังขยา',
         descriptionZh: '油条外酥内软，蘸椰奶蛋',
-        phone: '02-304-5678',
-        hours: '06:00-12:00'
-      },
-      {
-        id: 'nom-sod',
-        name: 'มนต์ นมสด (เสาชิงช้า)',
-        nameEn: 'Fresh Milk Dessert',
-        nameZh: '鲜奶甜品',
-        category: 'dessert',
-        location: 'เสาชิงช้า',
-        locationZh: '秋千柱',
-        lat: 13.7533,
-        lng: 100.5015,
-        rating: 4.7,
-        price: '30-70฿',
-        image: 'ของหวาน-img/มนต์ นมสด (เสาชิงช้า)-img.jpg',
-        description: 'นมสดเย็นๆ ขนมหวานนมสด หอมมัน',
-        descriptionZh: '冰鲜奶，鲜奶甜品，香浓可口',
-        phone: '02-305-6789',
-        hours: '10:00-22:00'
-      },
-      {
-        id: 'lod-chong',
-        name: 'ลอดช่องสิงคโปร์',
-        nameEn: 'Lod Chong (Pandan Jelly)',
-        nameZh: '班兰果冻',
-        category: 'dessert',
-        location: 'ลอดช่องสิงคโปร์',
-        locationZh: '新加坡区',
-        lat: 13.7410,
-        lng: 100.5126,
-        rating: 4.5,
-        price: '25-50฿',
-        image: 'ของหวาน-img/ลอดช่องสิงคโปร์-img.jpg',
-        description: 'ลอดช่องใบเตย กะทิหอมมัน น้ำแข็งใส',
-        descriptionZh: '班兰果冻，椰奶香浓，冰凉爽口',
-        phone: '02-306-7890',
-        hours: '11:00-21:00'
-      },
-      {
-        id: 'tub-tim-grob',
-        name: 'ทับทิมกรอบวงเวียนใหญ่',
-        nameEn: 'Water Chestnut Dessert',
-        nameZh: '红宝石甜品',
-        category: 'dessert',
-        location: 'วงเวียนใหญ่',
-        locationZh: '大圆环',
-        lat: 13.7258,
-        lng: 100.4925,
-        rating: 4.8,
-        price: '30-60฿',
-        image: 'ของหวาน-img/ทับทิมกรอบวงเวียนใหญ่-img.jpg',
-        description: 'ทับทิมกรอบเม็ดใหญ่ กะทิหอม น้ำแข็งเยอะ',
-        descriptionZh: '大颗红宝石，椰奶香浓，冰块充足',
-        phone: '02-307-8901',
-        hours: '10:00-20:00'
-      },
-      {
-        id: 'ice-cream',
-        name: 'ณัฐพรไอศกรีม',
-        nameEn: 'Nattaporn Ice Cream',
-        nameZh: '冰淇淋',
-        category: 'dessert',
-        location: 'ณัฐพรไอศกรีม',
-        locationZh: '冰淇淋区',
-        lat: 13.7536,
-        lng: 100.4981,
-        rating: 4.6,
-        price: '20-50฿',
-        image: 'ของหวาน-img/ณัฐพรไอศกรีม-img.jpg',
-        description: 'ไอศกรีมโฮมเมด รสชาติหลากหลาย',
-        descriptionZh: '自制冰淇淋，口味多样',
-        phone: '02-308-9012',
-        hours: '12:00-22:00'
-      },
-      {
-        id: 'pang-na',
-        name: 'ปังนา (บรรทัดทอง)',
-        nameEn: 'Pang Na Bread Dessert',
-        nameZh: '面包甜品',
-        category: 'dessert',
-        location: 'บรรทัดทอง',
-        locationZh: '金线路',
-        lat: 13.7441,
-        lng: 100.5226,
-        rating: 4.7,
-        price: '35-80฿',
-        image: 'ของหวาน-img/ปังนา (บรรทัดทอง)-img.jpg',
-        description: 'ขนมปังนมสด ไอศกรีม ท็อปปิ้งเพียบ',
-        descriptionZh: '鲜奶面包，冰淇淋，配料丰富',
-        phone: '02-309-0123',
-        hours: '14:00-23:00'
+        phone: '022819754',
+        hours: '06:00-08:00',
+        address: '246, ถนน พระสุเมรุ ตลาดยอด พระนคร กรุงเทพมหานคร\nตรงข้ามวัดบวรนิเวศวิหาร',
+        addressZh: '246, 帕素梅路, 塔拉约, 帕那空, 曼谷\n博沃尼威寺对面'
       }
     ],
     snack: [
+      // ID 10 - หมูสะเต๊ะแปลงนาม
       {
-        id: 'moo-ping',
-        name: 'หมูปิ้งเจี๊ยบวัน (สีลม)',
-        nameEn: 'Grilled Pork Skewers',
-        nameZh: '烤猪肉串',
-        category: 'snack',
-        location: 'สีลม',
-        locationZh: '石龙军',
-        lat: 13.7275,
-        lng: 100.5361,
-        rating: 4.8,
-        price: '10-30฿',
-        image: 'ของกินเล่น-img/หมูปิ้งเจี๊ยบวัน (สีลม-img.jpg',
-        description: 'หมูปิ้งหมักเครื่องเทศ ย่างไฟถ่าน หอมกรุ่น',
-        descriptionZh: '香料腌制烤猪肉，炭火烤制，香气扑鼻',
-        phone: '02-310-1234',
-        hours: '16:00-23:00'
-      },
-      {
-        id: 'look-chin',
-        name: 'ลูกชิ้นแพร่งนรา',
-        nameEn: 'Meatballs',
-        nameZh: '肉丸',
-        category: 'snack',
-        location: 'แพร่งนรา',
-        locationZh: '帕能那拉',
-        lat: 13.7535,
-        lng: 100.4981,
-        rating: 4.6,
-        price: '15-40฿',
-        image: 'ของกินเล่น-img/ลูกชิ้นแพร่งนรา-img.jpg',
-        description: 'ลูกชิ้นเด้งๆ ทำสดใหม่ทุกวัน',
-        descriptionZh: '弹牙肉丸，每天新鲜制作',
-        phone: '02-311-2345',
-        hours: '10:00-20:00'
-      },
-      {
-        id: 'guay-jub-stereo',
-        name: 'ขนมเบื้องไทยโบราณ',
-        nameEn: 'Traditional Thai Crepe',
-        nameZh: '传统泰式薄饼',
-        category: 'snack',
-        location: 'ขนมเบื้องแม่ประภา (บางลำพู)',
-        locationZh: '妈妈普拉传统薄饼店（邦兰普）',
-        lat: 13.7625491,
-        lng: 100.4975194,
-        rating: 4.4,
-        price: '15-20฿',
-        image: 'ของกินเล่น-img/ขนมเบื้องไทยโบราณ-img.jpg',
-        description: 'ขนมเบื้องไทยโบราณ ร้านอาหาร: ห้างต.เง๊กชวน ขนมเบื้องแม่ประภา (บางลำพู)',
-        descriptionZh: '传统泰式薄饼，妈妈普拉传统薄饼店（邦兰普）',
-        phone: '02-282-9522 / 090-998-3296',
-        hours: '09:00-18:00'
-      },
-      {
-        id: 'thuy-khai',
-        name: 'ถุยข่ายตลาดพลู',
-        nameEn: 'Thuy Khai Snack',
-        nameZh: '泰式小吃',
-        category: 'snack',
-        location: 'ตลาดพลู',
-        locationZh: '槟榔市场',
-        lat: 13.7214,
-        lng: 100.4851,
-        rating: 4.5,
-        price: '20-45฿',
-        image: 'ของกินเล่น-img/ถุยข่ายตลาดพลู-img.jpg',
-        description: 'ขนมจีบ ขนมจีน ของกินเล่นหลากหลาย',
-        descriptionZh: '烧卖，米粉，各种小吃',
-        phone: '02-313-4567',
-        hours: '07:00-15:00'
-      },
-      {
-        id: 'nong-tam',
-        name: 'น้องตาม & น้องเก๋า (เยาวราช)',
-        nameEn: 'Yaowarat Snacks',
-        nameZh: '耀华力小吃',
+        id: 'moo-satae',
+        name: 'หมูสะเต๊ะแปลงนาม',
+        nameEn: 'Moo Satae Plang Nam',
+        nameZh: '帕朗南猪肉沙爹',
         category: 'snack',
         location: 'เยาวราช',
         locationZh: '耀华力',
-        lat: 13.7408,
-        lng: 100.5110,
-        rating: 4.8,
-        price: '25-55฿',
-        image: 'ของกินเล่น-img/น้องตาม & น้องเก๋า (เยาวราช)-img.jpg',
-        description: 'ของกินเล่นสไตล์จีน หลากหลายเมนู',
-        descriptionZh: '中式小吃，菜单丰富',
-        phone: '02-314-5678',
-        hours: '11:00-22:00'
+        lat: 13.740678,
+        lng: 100.509616,
+        rating: 4.2,
+        price: '30-60฿',
+        image: 'https://img.wongnai.com/p/1920x0/2024/06/15/5d85584acc014e0b8351773287f008d7.jpg',
+        description: 'หมูสะเต๊ะย่างไฟถ่าน น้ำจิ้มรสเด็ด',
+        descriptionZh: '炭烤猪肉沙爹，酱汁美味',
+        phone: '086-548-4628',
+        hours: '16:00-17:00',
+        address: 'ถนนแปลงนาม, สัมพันธวงศ์, กรุงเทพมหานคร, 10100\nเข้าซอยแปลงนาม ร้านอยู่ซ้ายมือ',
+        addressZh: '帕朗南路, 三攀他旺, 曼谷, 10100\n进入帕朗南巷，店在左手边'
       },
+      // ID 11 - นายย้ง เจ้าเก่าสำเหร่
       {
-        id: 'curry-puff',
-        name: 'คุณนุ้ย กะหรี่ปั๊บ',
-        nameEn: 'Curry Puff',
-        nameZh: '咖喱角',
+        id: 'naiyong',
+        name: 'นายย้ง เจ้าเก่าสำเหร่',
+        nameEn: 'Naiyong Samrae',
+        nameZh: '乃勇老店三赖',
         category: 'snack',
-        location: 'คุณนุ้ย กะหรี่ปั๊บ',
-        locationZh: '咖喱角区',
-        lat: 13.7342,
-        lng: 100.5133,
-        rating: 4.9,
+        location: 'สำเหร่',
+        locationZh: '三赖',
+        lat: 13.713342,
+        lng: 100.488770,
+        rating: 4.2,
+        price: '25-50฿',
+        image: 'https://img.wongnai.com/p/1920x0/2023/03/22/4304aa857c5842639b34b23792a932e1.jpg',
+        description: 'ของกินเล่นหลากหลาย รสชาติต้นตำรับ',
+        descriptionZh: '各种小吃，正宗口味',
+        phone: '094-894-2429',
+        hours: '10:00-17:00',
+        address: '359, ตากสิน สำเหร่ ธนบุรี กรุงเทพมหานคร\nเลยซ.ตากสิน17 หรือระหว่าง รพ.นิติเวช กับ ธ.กสิกร',
+        addressZh: '359, 达信路, 三赖, 吞武里, 曼谷\n达信巷17号后，在法医医院和开泰银行之间'
+      },
+      // ID 12 - ยุ้ยเผือกทอด เสาชิงช้า
+      {
+        id: 'yui-phueak',
+        name: 'ยุ้ยเผือกทอด เสาชิงช้า',
+        nameEn: 'Yui Phueak Tod Sao Ching Cha',
+        nameZh: '油炸芋头摇摆柱',
+        category: 'snack',
+        location: 'เสาชิงช้า',
+        locationZh: '摇摆柱',
+        lat: 13.753431,
+        lng: 100.500519,
+        rating: 4.0,
         price: '15-35฿',
-        image: 'ของกินเล่น-img/คุณนุ้ย กะหรี่ปั๊บ-img.jpg',
-        description: 'กะหรี่ปั๊บแป้งกรอบ ไส้แน่น รสชาติเด็ด',
-        descriptionZh: '咖喱角皮脆，馅料饱满，味道绝佳',
-        phone: '02-315-6789',
-        hours: '09:00-18:00'
-      },
-      {
-        id: 'khanom-jeeb',
-        name: 'ขนมจีบเป๊ะเจี๊ยะ',
-        nameEn: 'Dim Sum',
-        nameZh: '烧卖',
-        category: 'snack',
-        location: 'ขนมจีบเป๊ะเจี๊ยะ',
-        locationZh: '烧卖区',
-        lat: 13.7457,
-        lng: 100.5092,
-        rating: 4.7,
-        price: '20-50฿',
-        image: 'ของกินเล่น-img/ขนมจีบเป๊ะเจี๊ยะ-img.jpg',
-        description: 'ขนมจีบหมูกุ้ง ไส้แน่น รสชาติกลมกล่อม',
-        descriptionZh: '猪肉虾烧卖，馅料饱满，味道圆润',
-        phone: '02-316-7890',
-        hours: '07:00-14:00'
-      },
-      {
-        id: 'kluay-tod',
-        name: 'กล้วยทอดนางเล็ง',
-        nameEn: 'Fried Banana',
-        nameZh: '炸香蕉',
-        category: 'snack',
-        location: 'กล้วยทอดนางเล็ง',
-        locationZh: '炸香蕉区',
-        lat: 13.7594,
-        lng: 100.5126,
-        rating: 4.6,
-        price: '10-25฿',
-        image: 'ของกินเล่น-img/กล้วยทอดนางเล็ง-img.jpg',
-        description: 'กล้วยทอดกรอบนอกนุ่มใน หอมหวาน',
-        descriptionZh: '炸香蕉外酥内软，香甜可口',
-        phone: '02-317-8901',
-        hours: '14:00-21:00'
-      },
-      {
-        id: 'angku',
-        name: 'อังกู่ (ตลาดน้อย)',
-        nameEn: 'Angku (Red Turtle Cake)',
-        nameZh: '红龟粿',
-        category: 'snack',
-        location: 'ตลาดน้อย',
-        locationZh: '小市场',
-        lat: 13.7344,
-        lng: 100.5123,
-        rating: 4.8,
-        price: '15-30฿',
-        image: 'ของกินเล่น-img/อังกู่ (ตลาดน้อย)-img.jpg',
-        description: 'อังกู่ไส้ถั่วเขียว หอมหวาน นุ่มนิ่ม',
-        descriptionZh: '绿豆馅红龟粿，香甜软糯',
-        phone: '02-318-9012',
-        hours: '08:00-17:00'
+        image: 'https://img.wongnai.com/p/1920x0/2025/08/22/32a25d27c7ef40099e65f4b5212d0669.jpg',
+        description: 'เผือกทอดกรอบนอกนุ่มใน หอมหวาน',
+        descriptionZh: '油炸芋头外酥内软，香甜可口',
+        phone: '0841417032',
+        hours: '07:00-08:30',
+        address: '130, มหรรณพ เสาชิงช้า พระนคร กรุงเทพมหานคร\nติดโรงเรียนสอนภาษาอาจารย์สงวน ติดริมถนนมหรรณพ',
+        addressZh: '130, 玛哈纳路, 摇摆柱, 帕那空, 曼谷\n靠近宋文语言学校，玛哈纳路旁'
       }
     ],
     noodle: [
-      {
-        id: 'thip-samai',
-        name: 'ทิพย์สมัย ผัดไทยประตูผี',
-        nameEn: 'Thip Samai Pad Thai',
-        nameZh: '泰式炒河粉',
-        category: 'noodle',
-        location: 'ประตูผี',
-        locationZh: '鬼门',
-        lat: 13.7527,
-        lng: 100.5048,
-        rating: 4.9,
-        price: '60-120฿',
-        image: 'อาหารเส้น-img/ทิพย์สมัย ผัดไทยประตูผี-img.jpg',
-        description: 'ผัดไทยห่อไข่ ตำนานความอร่อย มิชลินไกด์',
-        descriptionZh: '蛋包泰式炒河粉，传奇美味，米其林推荐',
-        phone: '02-319-0123',
-        hours: '17:00-02:00'
-      },
-      {
-        id: 'toy-tuay',
-        name: 'ต้อยถ้วยเคี้ยมเอื้อ',
-        nameEn: 'Toy Tuay Noodle Soup',
-        nameZh: '碗面汤',
-        category: 'noodle',
-        location: 'ต้อยถ้วยเคี้ยมเอื้อ',
-        locationZh: '碗面区',
-        lat: 13.7634,
-        lng: 100.5398,
-        rating: 4.7,
-        price: '40-80฿',
-        image: 'อาหารเส้น-img/ก๋วยเตี๋ยวน้ำใส เนื้อนุ่ม น้ำซุปหอม-img.jpg',
-        description: 'ก๋วยเตี๋ยวน้ำใส เนื้อนุ่ม น้ำซุปหอม',
-        descriptionZh: '清汤面，肉嫩，汤香',
-        phone: '02-320-1234',
-        hours: '08:00-16:00'
-      },
-      {
-        id: 'yen-ta-fo',
-        name: 'นายอ้วนเย็นตาโฟนะเค็ง',
-        nameEn: 'Yen Ta Fo (Pink Noodle Soup)',
-        nameZh: '粉红汤面',
-        category: 'noodle',
-        location: 'นะเค็ง',
-        locationZh: '那坑',
-        lat: 13.7535,
-        lng: 100.5003,
-        rating: 4.8,
-        price: '45-90฿',
-        image: 'อาหารเส้น-img/นายอ้วนเย็นตาโฟนะเค็ง-img.jpg',
-        description: 'เย็นตาโฟน้ำแดง เต้าหู้ทอด ปลาลูกชิ้น',
-        descriptionZh: '粉红汤面，炸豆腐，鱼丸',
-        phone: '02-321-2345',
-        hours: '09:00-18:00'
-      },
+      // ID 1 - ก๋วยจั๊บนายเอ็ก
       {
         id: 'guay-jub-nai-ek',
         name: 'ก๋วยจั๊บนายเอ็ก',
-        nameEn: 'Nai Ek Rolled Noodles',
+        nameEn: 'Nai Ek Roll Noodle',
         nameZh: '乃艾卷粉',
         category: 'noodle',
         location: 'เยาวราช',
         locationZh: '耀华力',
-        lat: 13.7410,
-        lng: 100.5094,
-        rating: 4.8,
-        price: '50-100฿',
-        image: 'อาหารเส้น-img/ก๋วยจั๊บนายเอ็ก-img.jpg',
+        lat: 13.7563,
+        lng: 100.5018,
+        rating: 3.8,
+        price: '40-80฿',
+        image: 'https://img.wongnai.com/p/1920x0/2020/10/20/3a5beab253934cd58300f75fdd06f95a.jpg',
         description: 'ก๋วยจั๊บน้ำซุปพริกไทยขาว หมูกรอบ',
         descriptionZh: '白胡椒汤卷粉，脆皮猪肉',
-        phone: '02-322-3456',
-        hours: '10:00-22:00'
+        phone: '022264651',
+        hours: '10:00-23:59',
+        address: 'ถนนเยาวราช (ปากซอยเยาวราช 9)\nอยู่ด้านซ้ายมือของถนนเยาวราช\nเยื้องๆกับโรงแรม Royal Hotel Bangkok',
+        addressZh: '耀华力路（耀华力巷9号入口）\n位于耀华力路左侧\n靠近曼谷皇家酒店'
       },
+      // ID 2 - ก๋วยเตี๋ยวเรืออยุธยา
       {
-        id: 'chalem-tuay',
-        name: 'แฉลมถ้วยเคี้ยมคั่วไก่',
-        nameEn: 'Chicken Noodles',
-        nameZh: '鸡肉面',
+        id: 'guay-tiew-ayutthaya',
+        name: 'ก๋วยเตี๋ยวเรืออยุธยารสดั้งเดิมสูตรโบราณ',
+        nameEn: 'Kuaitiao Ruea Ayutthaya',
+        nameZh: '正宗大城船面，传统配方。',
         category: 'noodle',
-        location: 'แฉลมถ้วยเคี้ยม',
-        locationZh: '碗面区',
-        lat: 13.7473,
-        lng: 100.5106,
-        rating: 4.6,
-        price: '40-75฿',
-        image: 'อาหารเส้น-img/แฉลมถ้วยเคี้ยมคั่วไก่-img.jpg',
-        description: 'ก๋วยเตี๋ยวไก่ เนื้อไก่นุ่ม น้ำซุปกลมกล่อม',
-        descriptionZh: '鸡肉面，鸡肉嫩滑，汤汁圆润',
-        phone: '02-323-4567',
-        hours: '07:00-15:00'
+        location: 'โรคัลโรด ดอนเมือง',
+        locationZh: '廊曼',
+        lat: 13.897445,
+        lng: 100.587634,
+        rating: 4.1,
+        price: '40-80฿',
+        image: 'https://img.wongnai.com/p/1920x0/2019/10/07/491aa67ec9d04aaab06d91de269e23a0.jpg',
+        description: 'ก๋วยเตี๋ยวเรือสูตรโบราณ น้ำซุปเข้มข้น',
+        descriptionZh: '传统船面，汤汁浓郁',
+        phone: '0835927997',
+        hours: '10:00-18:00',
+        address: 'กำแพงเพชร 6 ซอย 7 กรุงเทพมหานคร (เรียบถนนโรคัลโรด ซอยก่อนถึงเคหะดอนเมือง)',
+        addressZh: 'Kamphaeng Phet 6 Soi 7, 曼谷（位于 Local Road 沿线，即 Keha Don Mueang 之前的巷子）'
       },
+      // ID 3 - ทิพย์สมัย ผัดไทยประตูผี
       {
-        id: 'rad-na',
-        name: 'ราดหน้าฮอฮกสูร 40 ปี',
-        nameEn: 'Rad Na (Gravy Noodles)',
-        nameZh: '浇汁面',
+        id: 'thipsamai',
+        name: 'ทิพย์สมัย ผัดไทยประตูผี (ทิพย์สมัย)',
+        nameEn: 'Thipsamai Pad Thai Pratu Phi',
+        nameZh: 'Thipsamai Pad Thai Pratu Phi (蒂普萨迈)',
         category: 'noodle',
-        location: 'ฮอฮกสูร',
-        locationZh: '福寿区',
-        lat: 13.7536,
-        lng: 100.4993,
-        rating: 4.7,
-        price: '45-85฿',
-        image: 'อาหารเส้น-img/ราดหน้าฮอฮกสูร 40 ปี-img.jpg',
-        description: 'ราดหน้าเส้นใหญ่ น้ำราดข้น ผักกาดหอม',
-        descriptionZh: '宽面浇汁，酱汁浓郁，芥菜香',
-        phone: '02-324-5678',
-        hours: '10:00-20:00'
-      },
-      {
-        id: 'namee-kew-sae',
-        name: 'นะหมี่คิ้วแซ่ (ทองหล่อ)',
-        nameEn: 'Chinese Noodles',
-        nameZh: '中式面',
-        category: 'noodle',
-        location: 'ทองหล่อ',
-        locationZh: '通罗',
-        lat: 13.7246,
-        lng: 100.5779,
-        rating: 4.8,
-        price: '50-95฿',
-        image: 'อาหารเส้น-img/นะหมี่คิ้วแซ่ (ทองหล่อ)-img.jpg',
-        description: 'บะหมี่จีนแท้ เส้นเหนียว น้ำซุปเข้มข้น',
-        descriptionZh: '正宗中式面，面条有嚼劲，汤浓郁',
-        phone: '02-325-6789',
-        hours: '11:00-21:00'
-      },
-      {
-        id: 'see-laeng-yai',
-        name: 'สี่แหล่งใหญ่ (ทรงวาด)',
-        nameEn: 'Big Noodles',
-        nameZh: '大面',
-        category: 'noodle',
-        location: 'ทรงวาด',
-        locationZh: '颂瓦',
-        lat: 13.7397,
-        lng: 100.5085,
-        rating: 4.7,
-        price: '45-90฿',
-        image: 'อาหารเส้น-img/สี่แหล่งใหญ่ (ทรงวาด)-img.jpg',
-        description: 'ก๋วยเตี๋ยวเส้นใหญ่ เนื้อเยอะ คุ้มค่า',
-        descriptionZh: '大碗面，肉多，物超所值',
-        phone: '02-326-7890',
-        hours: '08:00-17:00'
-      },
-      {
-        id: 'elvis-suki',
-        name: 'เฮลวีส สุกี้ (ยศเส)',
-        nameEn: 'Elvis Sukiyaki',
-        nameZh: '火锅',
-        category: 'noodle',
-        location: 'ยศเส',
-        locationZh: '耀瑟',
-        lat: 13.7490,
-        lng: 100.5159,
-        rating: 4.9,
+        location: 'พระนคร ท่าพระจันทร์ - วังบูรพา',
+        locationZh: '帕那空、塔帕陈 - Wang Burapha',
+        lat: 13.7308,
+        lng: 100.5214,
+        rating: 3.7,
         price: '60-120฿',
-        image: 'อาหารเส้น-img/เฮลวีส สุกี้ (ยศเส)-img.jpg',
-        description: 'สุกี้แห้งคั่วกระทะ หอมกลิ่นไหม้ อร่อยเด็ด',
-        descriptionZh: '干锅火锅，焦香味美，超级好吃',
-        phone: '02-327-8901',
-        hours: '16:00-23:00'
+        image: 'https://img.wongnai.com/p/1920x0/2018/01/08/a2a0fca003fb4b70b47748ae8341b65c.jpg',
+        description: 'ผัดไทยห่อไข่ ตำนานความอร่อย',
+        descriptionZh: '蛋包泰式炒河粉，传奇美味',
+        phone: '022266666',
+        hours: '10:00-23:30',
+        address: '315 ถนนมหาไชย กรุงเทพมหานคร (ตรงข้ามวัดเทพธิดา)',
+        addressZh: '曼谷玛哈猜路 315 号（Wat Thep Thida 对面）'
       }
     ]
   };
 
   // Current active category
-  let currentCategory = 'main';
+  let currentCategory = 'all';
 
   // Initialize when DOM is ready and config is loaded
   document.addEventListener('DOMContentLoaded', function() {
@@ -729,19 +333,33 @@
   // Render food grid for category
   function renderFoodGrid(category) {
     const foodGrid = document.getElementById('foodGrid');
-    let foods = foodData[category];
+    let foods = [];
     
-    console.log(`🍽️ Rendering category: ${category}, Total items available: ${foods ? foods.length : 0}`);
+    console.log(`🍽️ Rendering category: ${category}`);
     
-    // Apply configuration to limit items per category
-    if (window.streetFoodConfig && window.streetFoodConfig.categories[category]) {
-      const allowedIds = window.streetFoodConfig.categories[category];
-      console.log(`🔧 Filtering to allowed IDs:`, allowedIds);
-      foods = foods.filter(food => allowedIds.includes(food.id));
-      console.log(`✅ After filtering: ${foods.length} items`);
+    // If "all" category, combine all foods from all categories
+    if (category === 'all') {
+      foods = [
+        ...foodData.main,
+        ...foodData.dessert,
+        ...foodData.snack,
+        ...foodData.noodle
+      ];
+      console.log(`✅ Showing all items: ${foods.length} total`);
     } else {
-      console.warn(`⚠️ No config found for category: ${category}`);
-      console.log('window.streetFoodConfig:', window.streetFoodConfig);
+      foods = foodData[category];
+      console.log(`🍽️ Total items available in ${category}: ${foods ? foods.length : 0}`);
+      
+      // Apply configuration to limit items per category
+      if (window.streetFoodConfig && window.streetFoodConfig.categories[category]) {
+        const allowedIds = window.streetFoodConfig.categories[category];
+        console.log(`🔧 Filtering to allowed IDs:`, allowedIds);
+        foods = foods.filter(food => allowedIds.includes(food.id));
+        console.log(`✅ After filtering: ${foods.length} items`);
+      } else {
+        console.warn(`⚠️ No config found for category: ${category}`);
+        console.log('window.streetFoodConfig:', window.streetFoodConfig);
+      }
     }
     
     if (!foods || foods.length === 0) {
@@ -800,15 +418,63 @@
     const foodCards = document.querySelectorAll('.food-card');
     
     foodCards.forEach(card => {
-      card.addEventListener('click', function() {
+      card.addEventListener('click', function(e) {
         const foodId = this.getAttribute('data-food-id');
         const food = findFoodById(foodId);
         
         if (food) {
-          showLocationModal(food);
+          // Check if user clicked the CTA button
+          const isCtaButton = e.target.classList.contains('food-card-cta') || 
+                             e.target.closest('.food-card-cta');
+          
+          if (isCtaButton) {
+            // Show modal for CTA button click
+            showLocationModal(food);
+          } else {
+            // Redirect to explore page for card/image click
+            goToExploreWithLocation(food);
+          }
         }
       });
     });
+  }
+
+  // Go to Explore page with location pre-selected
+  function goToExploreWithLocation(food) {
+    // Store the location ID in sessionStorage for more reliable matching
+    // Map street food IDs to explore page IDs
+    const idMapping = {
+      // Main dishes
+      'khao-man-gai': 5,      // โกอ่างข้าวมันไก่ประตูน้ำ
+      'larb-ped': 6,          // ลาบเป็ดนายหนอม
+      'siew-lang': 4,         // เสียวหลัง
+      // Desserts
+      'mango-sticky-rice-dessert': 7,  // ข้าวเหนียวมะม่วงป้าณี
+      'chao-wan': 8,          // เจ้วรรณสวนหลวงจุฬา
+      'patongko': 9,          // ปาท่องโก๋เสวย
+      // Snacks
+      'moo-satae': 10,        // หมูสะเต๊ะแปลงนาม
+      'naiyong': 11,          // นายย้ง เจ้าเก่าสำเหร่
+      'yui-phueak': 12,       // ยุ้ยเผือกทอด เสาชิงช้า
+      // Noodles
+      'guay-jub-nai-ek': 1,   // ก๋วยจั๊บนายเอ็ก
+      'guay-tiew-ayutthaya': 2, // ก๋วยเตี๋ยวเรืออยุธยา
+      'thipsamai': 3          // ทิพย์สมัย ผัดไทยประตูผี
+    };
+    
+    const exploreId = idMapping[food.id];
+    
+    if (exploreId) {
+      // Store the explore page location ID
+      sessionStorage.setItem('exploreLocationId', exploreId);
+    }
+    
+    // Also store coordinates as fallback
+    sessionStorage.setItem('exploreLocationLat', food.lat);
+    sessionStorage.setItem('exploreLocationLng', food.lng);
+    
+    // Redirect to explore page
+    window.location.href = 'explore.html';
   }
 
   // Find food by ID

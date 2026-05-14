@@ -4,23 +4,23 @@
   "categories": {
     "main": [
       "khao-man-gai",
-      "charoen-saeng",
-      "prajak-ped"
+      "larb-ped",
+      "siew-lang"
     ],
     "dessert": [
-      "ka-pai",
-      "bua-loy",
-      "khanom-buang"
+      "mango-sticky-rice-dessert",
+      "chao-wan",
+      "patongko"
     ],
     "snack": [
-      "moo-ping",
-      "look-chin",
-      "guay-jub-stereo"
+      "moo-satae",
+      "naiyong",
+      "yui-phueak"
     ],
     "noodle": [
-      "thip-samai",
-      "toy-tuay",
-      "yen-ta-fo"
+      "guay-jub-nai-ek",
+      "guay-tiew-ayutthaya",
+      "thipsamai"
     ]
   }
 }

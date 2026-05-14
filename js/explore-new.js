@@ -1,7 +1,4 @@
-/* ══════════════════════════════════════════════════════════════
-   EXPLORE PAGE - New Design JavaScript
-   Thai Streetfood Softpower Theme
-   ══════════════════════════════════════════════════════════════ */
+/* this one is explore tab */
 
 // Initialize map
 let map;
@@ -22,11 +19,10 @@ let locationsData = [
     icon: '🍜',
     area: 'เยาวราช',
     areaZh: '耀华力',
-    rating: 3.9,
-    distance: '3.9 km',
+    rating: 3.8,
     category: 'food',
-    lat: 13.7563,
-    lng: 100.5018,
+    lat: 13.740208,
+    lng: 100.509970,
     hours: 'เปิดอยู่จนถึง 23:59',
     hoursZh: '营业至 23:59',
     address: 'ถนนเยาวราช (ปากซอยเยาวราช 9)\nอยู่ด้านซ้ายมือของถนนเยาวราช\nเยื้องๆกับโรงแรม Royal Hotel Bangkok',
@@ -37,341 +33,329 @@ let locationsData = [
     ],
     phone: '022264651',
     images: [
-      'https://images.unsplash.com/photo-1555126634-323283e090fa?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80',
-      'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2020/10/20/3a5beab253934cd58300f75fdd06f95a.jpg',
+      'https://img.wongnai.com/p/1920x0/2020/02/11/3ef7819cbcb34c6380316a86da6c37cd.jpg',
+      'https://img.wongnai.com/p/1920x0/2026/03/19/1ec5d7cd29204b3d9a26a3aa833f4381.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/12/18/74cfcd3ccfd74244917e738f695783e9.jpg'
     ]
   },
   {
     id: 2,
-    title: 'เปิดป่าพริกไทย',
-    titleZh: '泰式胡椒餐厅',
-    subtitle: '(Perd Pa Prik Thai)',
-    subtitleZh: '(Perd Pa Prik Thai)',
+    title: 'ก๋วยเตี๋ยวเรืออยุธยารสดั้งเดิมสูตรโบราณ',
+    titleZh: '正宗大城船面，传统配方。',
+    subtitle: '(Kuaitiao Ruea Ayutthaya)',
+    subtitleZh: '(Kuaitiao Ruea Ayutthaya)',
     icon: '🍝',
-    area: 'ท่าเตียน',
-    areaZh: '塔田',
-    rating: 4.2,
-    distance: '4.2 km',
+    area: 'โรคัลโรด ดอนเมือง',
+    areaZh: '廊曼',
+    rating: 4.1,
     category: 'food',
-    lat: 13.7440,
-    lng: 100.5255,
-    hours: 'เปิดอยู่จนถึง 22:00',
-    hoursZh: '营业至 22:00',
-    address: 'ถนนมหาราช แขวงพระบรมมหาราชวัง\nใกล้วัดพระเชตุพนวิมลมังคลาราม\nเยื้องตลาดท่าเตียน',
-    addressZh: '玛哈拉路 帕博隆玛哈拉旺区\n靠近卧佛寺\n塔田市场对面',
+    lat: 13.897445,
+    lng: 100.587634,
+    hours: 'เปิดอยู่จนถึง 18:00',
+    hoursZh: '营业至 18:00',
+    address: 'กำแพงเพชร 6 ซอย 7 กรุงเทพมหานคร (เรียบถนนโรคัลโรด ซอยก่อนถึงเคหะดอนเมือง)',
+    addressZh: 'Kamphaeng Phet 6 Soi 7, 曼谷（位于 Local Road 沿线，即 Keha Don Mueang 之前的巷子）',
     transport: [
-      { icon: '🚇', text: '500 ม. จาก MRT สนามไชย', textZh: '距离 MRT 沙南猜站 500 米' },
-      { icon: '🚢', text: '300 ม. จากท่าเรือท่าเตียน', textZh: '距离塔田码头 300 米' }
+      { icon: '🚇', text: '-', textZh: '-' },
+      { icon: '🚢', text: '-', textZh: '-' }
     ],
-    phone: '022234567',
+    phone: '0835927997',
     images: [
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80',
-      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2019/10/07/491aa67ec9d04aaab06d91de269e23a0.jpg',
+      'https://img.wongnai.com/p/1920x0/2024/08/03/9c555639cf6f4c2bbec06e6861f5c0a7.jpg',
+      'https://img.wongnai.com/p/1920x0/2023/04/02/24b2fe23092c4e72be97bd52282bb985.jpg',
+      'https://img.wongnai.com/p/1920x0/2023/01/11/25ccf8d6d2904c48b8a8bf44aca79f98.jpg'
     ]
   },
   {
     id: 3,
-    title: 'ย่านสตรีทฟู้ด ตลาดน้อย',
-    titleZh: '塔拉诺街头美食区',
-    subtitle: '(Talad Noi Street Food)',
-    subtitleZh: '(Talad Noi 街头美食)',
+    title: 'ทิพย์สมัย ผัดไทยประตูผี (ทิพย์สมัย)',
+    titleZh: 'Thipsamai Pad Thai Pratu Phi (蒂普萨迈)',
+    subtitle: '( Thipsamai Pad Thai Pratu Phi)',
+    subtitleZh: '(Thipsamai Pad Thai Pratu Phi)',
     icon: '🥘',
-    area: 'สตรีทฟู้ด',
-    areaZh: '街头美食',
-    rating: 4.5,
-    distance: '4.5 km',
+    area: 'พระนคร ท่าพระจันทร์ - วังบูรพา',
+    areaZh: '帕那空、塔帕陈 - Wang Burapha',
+    rating: 3.7,
     category: 'food',
     lat: 13.7308,
     lng: 100.5214,
-    hours: 'เปิดอยู่จนถึง 21:00',
-    hoursZh: '营业至 21:00',
-    address: 'ซอยวานิช 2 แขวงตลาดน้อย\nเขตสัมพันธวงศ์\nใกล้วัดปทุมคงคา',
-    addressZh: '瓦尼巷2号 塔拉诺区\n三攀他旺县\n靠近帕吞空卡寺',
+    hours: 'เปิดอยู่จนถึง 23:30',
+    hoursZh: '营业至 23:30',
+    address: '315 ถนนมหาไชย กรุงเทพมหานคร (ตรงข้ามวัดเทพธิดา)',
+    addressZh: '曼谷玛哈猜路 315 号（Wat Thep Thida 对面）',
     transport: [
-      { icon: '🚇', text: '600 ม. จาก MRT หัวลำโพง', textZh: '距离 MRT 华南蓬站 600 米' },
-      { icon: '🚌', text: 'ป้ายรถเมล์ตลาดน้อย', textZh: '塔拉诺公交站' }
+       { icon: '🚇', text: '-', textZh: '-' },
+       { icon: '🚢', text: '-', textZh: '-' }
     ],
-    phone: '022345678',
+    phone: '022266666',
     images: [
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80',
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2018/01/08/a2a0fca003fb4b70b47748ae8341b65c.jpg',
+      'https://img.wongnai.com/p/1920x0/2021/03/23/a7fce754b5b446fe927ca78f8f66176e.jpg',
+      'https://img.wongnai.com/p/1920x0/2020/12/14/b7fd5d6c6c4246d495a299b81e7f2459.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/05/30/c8920f5447da432eafa5cca8d9369d87.jpg'
     ]
   },
   {
     id: 4,
-    title: 'ติ่มซำจีนแท้',
-    titleZh: '正宗中式点心',
-    subtitle: '(Authentic Dim Sum)',
-    subtitleZh: '(正宗点心)',
-    icon: '🥟',
-    area: 'เยาวราช',
-    areaZh: '耀华力',
-    rating: 4.1,
-    distance: '4.1 km',
+    title: 'เสียวหลัง',
+    titleZh: '背痛',
+    subtitle: '(sĭieow lăng)',
+    subtitleZh: '(背痛)',
+    icon: '🍚',
+    area: 'ปากคลองตลาด',
+    areaZh: '帕克隆塔拉特',
+    rating: 3.8,
     category: 'food',
-    lat: 13.7650,
-    lng: 100.5380,
+    lat: 13.752770,
+    lng: 100.494746,
     hours: 'เปิดอยู่จนถึง 20:00',
     hoursZh: '营业至 20:00',
-    address: 'ถนนเยาวราช ซอย 11\nแขวงสัมพันธวงศ์\nใกล้ตลาดสำเพ็ง',
-    addressZh: '耀华力路 巷11号\n三攀他旺区\n靠近三攀市场',
+    address: '227 ถนนอัษฎางค์ แขวงวังบูรพาฯ กรุงเทพมหานคร (ใช้ถนนอัษฎางค์ จากปากคลองตลาด มุ่งหน้าโรงเรียนราชินี ให้เลี้ยวซ้ายเข้าซอยเซเว่นอีเลฟเว่นตรงหัวมุมที่อยู่ติดสะพานคลองคูเมืองเดิม ตรงเข้าไปประมาณ 200 เมตรจะเห็นร้านเสียวหลัง ตั้งอยู่ในซอยเล็กๆ ด้านซ้ายมือ)',
+    addressZh: '地址：曼谷旺布拉帕区阿萨当路227号（从帕空塔拉特出发，沿阿萨当路朝拉吉尼学校方向行驶。在靠近旧孔库芒桥的拐角处，7-Eleven便利店旁边的小巷左转。直行约200米，您会在左侧的小巷里看到Siew Lang商店。）',
     transport: [
-      { icon: '🚇', text: '400 ม. จาก MRT วัดมังกร', textZh: '距离 MRT 龙莲寺站 400 米' },
-      { icon: '🚇', text: '700 ม. จาก MRT สามยอด', textZh: '距离 MRT 三约站 700 米' }
+       { icon: '🚇', text: '-', textZh: '-' },
+       { icon: '🚢', text: '-', textZh: '-' }
     ],
-    phone: '022267890',
+    phone: '022227212',
     images: [
-      'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400&q=80',
-      'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2021/02/20/83b3936bc46947cd8d0135416458f55b.jpg',
+      'https://img.wongnai.com/p/1920x0/2024/03/05/06cd6361659e44619eff2dd05842b62e.jpg',
+      'https://img.wongnai.com/p/1920x0/2023/12/11/d27bdd395e314de4a8ee232409fcc88d.jpg',
+      'https://img.wongnai.com/p/1920x0/2023/08/13/61af630b4d514386a90eed5bdac48503.jpg'
     ]
   },
-  // === NEW LOCATIONS FROM STREET FOOD PAGE (36 RESTAURANTS) ===
   {
     id: 5,
-    title: 'โกโก้ข้าวมันไก่ประตูน้ำ',
-    titleZh: '海南鸡饭',
-    subtitle: '(Khao Man Gai)',
-    subtitleZh: '(海南鸡饭)',
+    title: 'โกอ่างข้าวมันไก่ประตูน้ำ',
+    titleZh: '水门海南鸡饭',
+    subtitle: '(GoAng Kaomunkai Pratunam)',
+    subtitleZh: '(水门海南鸡饭)',
     icon: '🍗',
     area: 'ประตูน้ำ',
     areaZh: '水门',
-    rating: 4.7,
-    distance: '5.2 km',
+    rating: 4.5,
     category: 'food',
-    lat: 13.7501,
-    lng: 100.5413,
-    hours: 'เปิดอยู่จนถึง 14:00',
-    hoursZh: '营业至 14:00',
-    address: 'ประตูน้ำ กรุงเทพฯ\nข้าวมันไก่สูตรดั้งเดิม',
-    addressZh: '水门 曼谷\n传统海南鸡饭',
+    lat: 13.749643,
+    lng: 100.542096,
+    hours: 'เปิดอยู่จนถึง 23:59',
+    hoursZh: '营业至 23:59',
+    address: '960-962 ซอยเพชรบุรี 30 ถนนเพชรบุรีตัดใหม่\nปากซ.เพชรบุรี 30 ใกล้แยก',
+    addressZh: '960-962 碧武里巷30号 碧武里新路\n碧武里巷30号入口附近',
     transport: [
-      { icon: '🚇', text: '300 ม. จาก BTS ราชเทวี', textZh: '距离 BTS 拉差贴威站 300 米' },
-      { icon: '🚌', text: 'ป้ายรถเมล์ประตูน้ำ', textZh: '水门公交站' }
+      { icon: '🚇', text: '600 ม. จาก BTS ชิดลม', textZh: '距离 BTS 奇隆站 600 米' },
+      { icon: '🚇', text: '900 ม. จาก BTS สยาม', textZh: '距离 BTS 暹罗站 900 米' }
     ],
     phone: '02-252-6325',
     images: [
-      'https://images.unsplash.com/photo-1562159278-1253a58da141?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80',
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2023/06/15/d6347878d3dc4d4aa8c84d75de95186e.jpg',
+      'https://img.wongnai.com/p/1920x0/2024/07/08/ff027e2605384669b8b56a811a5e18c6.jpg',
+      'https://img.wongnai.com/p/1920x0/2024/12/05/92bff4ece9e94a8e837d34f74b059d47.jpg',
+      'https://img.wongnai.com/p/1920x0/2024/12/05/a65d3733fbc0428f9dc5577920d35ce4.jpg'
     ]
   },
   {
     id: 6,
-    title: 'เจริญแสงสีลม',
-    titleZh: '昌盛石龙军',
-    subtitle: '(Charoen Saeng Silom)',
-    subtitleZh: '(昌盛石龙军)',
-    icon: '🍛',
-    area: 'สีลม',
-    areaZh: '石龙军',
-    rating: 4.5,
-    distance: '3.8 km',
+    title: 'ลาบเป็ดนายหนอม',
+    titleZh: '乃诺鸭肉沙拉',
+    subtitle: '(Lap Pet Nai Nom)',
+    subtitleZh: '(乃诺鸭肉沙拉)',
+    icon: '🦆',
+    area: 'ดินแดง',
+    areaZh: '丁当',
+    rating: 4.0,
     category: 'food',
-    lat: 13.7237,
-    lng: 100.5173,
-    hours: 'เปิดอยู่จนถึง 22:00',
-    hoursZh: '营业至 22:00',
-    address: 'สีลม กรุงเทพฯ\nอาหารไทยรสชาติต้นตำรับ',
-    addressZh: '石龙军 曼谷\n正宗泰国菜',
+    lat: 13.778884,
+    lng: 100.56332,
+    hours: 'เปิดอยู่จนถึง 10:30',
+    hoursZh: '营业至 10:30',
+    address: '270/48, ซอยประชาสงเคราะห์ 27, ดินแดง, กรุงเทพมหานคร, 10400\nใกล้ม.หอการค้า ประมาณ 300 เมตร',
+    addressZh: '270/48, 巷 Pracha Songkhro 27, 丁当, 曼谷, 10400\n距离华侨崇圣大学约 300 米',
     transport: [
-      { icon: '🚇', text: '200 ม. จาก BTS ศาลาแดง', textZh: '距离 BTS 沙拉当站 200 米' },
-      { icon: '🚇', text: '400 ม. จาก MRT สีลม', textZh: '距离 MRT 石龙军站 400 米' }
+      { icon: '🚇', text: 'ใกล้ม.หอการค้า 300 ม.', textZh: '距离华侨崇圣大学 300 米' },
+      { icon: '🚌', text: 'ป้ายรถเมล์ดินแดง', textZh: '丁当公交站' }
     ],
-    phone: '02-234-5678',
+    phone: '026928489',
     images: [
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80',
-      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2020/10/20/3a5beab253934cd58300f75fdd06f95a.jpg',
+      'https://img.wongnai.com/p/1920x0/2020/02/11/3ef7819cbcb34c6380316a86da6c37cd.jpg',
+      'https://img.wongnai.com/p/1920x0/2021/05/11/a77d74fde1b84325bc9e2ce2d460cd79.jpg',
+      'https://img.wongnai.com/p/1920x0/2022/04/28/f2a68985c901427dba7b6190063def45.jpg'
     ]
   },
   {
     id: 7,
-    title: 'สีมรกต',
-    titleZh: '翡翠餐厅',
-    subtitle: '(Seemorakat Restaurant)',
-    subtitleZh: '(翡翠餐厅)',
-    icon: '🥘',
-    area: 'สีมรกต',
-    areaZh: '翡翠区',
-    rating: 4.6,
-    distance: '4.3 km',
+    title: 'ข้าวเหนียวมะม่วงป้าณี (วัดราชโอรส)',
+    titleZh: '阿妮芒果糯米饭（拉差欧罗寺）',
+    subtitle: '(Sweet sticky rice aunt nee)',
+    subtitleZh: '(阿妮芒果糯米饭)',
+    icon: '🥭',
+    area: 'จอมทอง',
+    areaZh: '宗通',
+    rating: 4.4,
     category: 'food',
-    lat: 13.7363,
-    lng: 100.5152,
-    hours: 'เปิดอยู่จนถึง 21:00',
-    hoursZh: '营业至 21:00',
-    address: 'สีมรกต กรุงเทพฯ\nอาหารไทยสไตล์โฮมเมด',
-    addressZh: '翡翠区 曼谷\n家常泰国菜',
+    lat: 13.702087,
+    lng: 100.465379,
+    hours: 'เปิดอยู่จนถึง 09:00',
+    hoursZh: '营业至 09:00',
+    address: '159 วุฒกาศ แขวงจอมทอง เขต จอมทอง กรุงเทพมหานคร 10150\nเข้าซอยเอกชัย4 ตามทางมาเจอ รร. แล้วเลี้ยวขวา',
+    addressZh: '159 Wutthakat, 宗通区, 曼谷 10150\n进入 Ekamai 4 巷，看到学校后右转',
     transport: [
-      { icon: '🚇', text: '500 ม. จาก MRT สนามไชย', textZh: '距离 MRT 沙南猜站 500 米' },
-      { icon: '🚌', text: 'ป้ายรถเมล์สีมรกต', textZh: '翡翠公交站' }
+      { icon: '🚇', text: 'ใกล้สถานีรถไฟจอมทอง', textZh: '靠近宗通火车站' },
+      { icon: '🚌', text: 'ป้ายรถเมล์จอมทอง', textZh: '宗通公交站' }
     ],
-    phone: '02-245-7890',
+    phone: '0909910651',
     images: [
-      'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80',
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2024/03/22/ecbfaa047411426c8c546a40486b73e0.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/06/08/706393052d1f4ab898efc904b0b88baf.jpg',
+      'https://img.wongnai.com/p/1920x0/2022/04/07/80a8633d417946cdab8713dd831cba27.jpg',
+      'https://img.wongnai.com/p/1920x0/2026/05/04/a9a6a07e5f4141a085a35ffdbb94ffed.jpg'
     ]
   },
   {
     id: 8,
-    title: 'เผ็ดมาก',
-    titleZh: '很辣餐厅',
-    subtitle: '(Ped Mak - Very Spicy)',
-    subtitleZh: '(很辣餐厅)',
-    icon: '🌶️',
-    area: 'เผ็ดมาก',
-    areaZh: '很辣区',
-    rating: 4.8,
-    distance: '6.5 km',
+    title: 'เจ้วรรณสวนหลวงจุฬา',
+    titleZh: '朱拉隆功皇家公园甜品',
+    subtitle: '(Chao Wan Suan Luang Chula)',
+    subtitleZh: '(朱拉隆功皇家公园甜品)',
+    icon: '🍨',
+    area: 'ปทุมวัน',
+    areaZh: '巴吞旺',
+    rating: 3.7,
     category: 'food',
-    lat: 13.7199,
-    lng: 100.5849,
-    hours: 'เปิดอยู่จนถึง 20:00',
-    hoursZh: '营业至 20:00',
-    address: 'เผ็ดมาก กรุงเทพฯ\nอาหารรสจัดจ้าน เผ็ดร้อนสะใจ',
-    addressZh: '很辣区 曼谷\n超辣美食',
+    lat: 13.739625,
+    lng: 100.522226,
+    hours: 'เปิดอยู่จนถึง 13:30',
+    hoursZh: '营业至 13:30',
+    address: '1700, ถนนบรรทัดทอง รองเมือง ปทุมวัน กรุงเทพมหานคร\nตรงข้ามอุทยาน 100ปี จุฬา',
+    addressZh: '1700, 班塔通路, 荣木昂, 巴吞旺, 曼谷\n朱拉隆功大学100周年公园对面',
     transport: [
-      { icon: '🚇', text: '600 ม. จาก BTS อ่อนนุช', textZh: '距离 BTS 翁努站 600 米' },
-      { icon: '🚌', text: 'ป้ายรถเมล์เผ็ดมาก', textZh: '很辣公交站' }
+      { icon: '🚇', text: '600 ม. จาก MRT สามย่าน', textZh: '距离 MRT 三燕站 600 米' },
+      { icon: '🚌', text: 'ป้ายรถเมล์บรรทัดทอง', textZh: '班塔通公交站' }
     ],
-    phone: '02-256-1234',
+    phone: '081-421-3761',
     images: [
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80',
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2025/07/27/9f048ba00f084702b244feff98e965b3.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/07/31/37736599f0de4809bfcdcb79415d0c33.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/07/30/089cf1470a2a4eac8cff27575bdfc581.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/07/17/23eea13f0ce046f6a86671bbe7df3263.jpg'
     ]
   },
   {
     id: 9,
-    title: 'ประจักษ์เป็ดย่าง',
-    titleZh: '烤鸭店',
-    subtitle: '(Prajak Roasted Duck)',
-    subtitleZh: '(烤鸭店)',
-    icon: '🦆',
-    area: 'ประจักษ์เป็ดย่าง',
-    areaZh: '烤鸭区',
-    rating: 4.9,
-    distance: '3.7 km',
+    title: 'ปาท่องโก๋เสวย',
+    titleZh: '油条咖啡馆',
+    subtitle: '(Pa Tong Go Cafe)',
+    subtitleZh: '(油条咖啡馆)',
+    icon: '🥖',
+    area: 'บางลำพู',
+    areaZh: '邦兰普',
+    rating: 3.7,
     category: 'food',
-    lat: 13.7202,
-    lng: 100.5161,
-    hours: 'เปิดอยู่จนถึง 18:00',
-    hoursZh: '营业至 18:00',
-    address: 'ประจักษ์เป็ดย่าง กรุงเทพฯ\nเป็ดย่างหนังกรอบ เปิดมากว่า 100 ปี',
-    addressZh: '烤鸭区 曼谷\n烤鸭皮脆，开业超过100年',
+    lat: 13.761204,
+    lng: 100.499545,
+    hours: 'เปิดอยู่จนถึง 08:00',
+    hoursZh: '营业至 08:00',
+    address: '246, ถนน พระสุเมรุ ตลาดยอด พระนคร กรุงเทพมหานคร\nตรงข้ามวัดบวรนิเวศวิหาร',
+    addressZh: '246, 帕素梅路, 塔拉约, 帕那空, 曼谷\n博沃尼威寺对面',
     transport: [
-      { icon: '🚇', text: '400 ม. จาก MRT สนามไชย', textZh: '距离 MRT 沙南猜站 400 米' },
-      { icon: '🚌', text: 'ป้ายรถเมล์ประจักษ์', textZh: '烤鸭公交站' }
+      { icon: '🚇', text: 'ใกล้วัดบวรนิเวศวิหาร', textZh: '靠近博沃尼威寺' },
+      { icon: '🚌', text: 'ป้ายรถเมล์บางลำพู', textZh: '邦兰普公交站' }
     ],
-    phone: '02-234-9876',
+    phone: '022819754',
     images: [
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80',
-      'https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80',
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2024/10/22/c27fa48383ec4f818522da1c7d89d251.jpg',
+      'https://img.wongnai.com/p/1920x0/2023/08/13/a06e76ff6a6f4c65807230f8187012cb.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/06/25/aded881665134c02ad74792f50e3cbd1.jpg',
+      'https://img.wongnai.com/p/1920x0/2024/10/22/290b220f31054f648c02f82a7118e265.jpg'
     ]
   },
   {
     id: 10,
-    title: 'ไอซา รสดี',
-    titleZh: '美味餐厅',
-    subtitle: '(Aisa Rosdee)',
-    subtitleZh: '(美味餐厅)',
-    icon: '🍲',
-    area: 'ไอซา รสดี',
-    areaZh: '美味区',
-    rating: 4.4,
-    distance: '4.9 km',
+    title: 'หมูสะเต๊ะแปลงนาม',
+    titleZh: '帕朗南猪肉沙爹',
+    subtitle: '(Moo Satae Plang Nam)',
+    subtitleZh: '(帕朗南猪肉沙爹)',
+    icon: '🍖',
+    area: 'เยาวราช',
+    areaZh: '耀华力',
+    rating: 4.2,
     category: 'food',
-    lat: 13.7593,
-    lng: 100.4984,
-    hours: 'เปิดอยู่จนถึง 21:00',
-    hoursZh: '营业至 21:00',
-    address: 'ไอซา รสดี กรุงเทพฯ\nอาหารไทยรสชาติดี ราคาประหยัด',
-    addressZh: '美味区 曼谷\n泰国菜味道好，价格实惠',
+    lat: 13.740678,
+    lng: 100.509616,
+    hours: 'เปิดอยู่จนถึง 17:00',
+    hoursZh: '营业至 17:00',
+    address: 'ถนนแปลงนาม, สัมพันธวงศ์, กรุงเทพมหานคร, 10100\nเข้าซอยแปลงนาม ร้านอยู่ซ้ายมือ',
+    addressZh: '帕朗南路, 三攀他旺, 曼谷, 10100\n进入帕朗南巷，店在左手边',
     transport: [
-      { icon: '🚇', text: '300 ม. จาก MRT สนามไชย', textZh: '距离 MRT 沙南猜站 300 米' },
-      { icon: '🚌', text: 'ป้ายรถเมล์ไอซา', textZh: '美味公交站' }
+      { icon: '🚇', text: '800 ม. จาก MRT หัวลำโพง', textZh: '距离 MRT 华南蓬站 800 米' },
+      { icon: '🚌', text: 'ป้ายรถเมล์เยาวราช', textZh: '耀华力公交站' }
     ],
-    phone: '02-267-5432',
+    phone: '086-548-4628',
     images: [
-      'https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80',
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2024/06/15/5d85584acc014e0b8351773287f008d7.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/03/20/fc48d5be71ec4ae7b88141f45b390227.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/08/24/2d0c2f3d30194410954a731399143b8a.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/12/31/47cdd495a55f45628b459eef8aa23c48.jpg'
     ]
   },
   {
     id: 11,
-    title: 'ข้าวแกงเจ๊กปุ๋ย',
-    titleZh: '咖喱饭',
-    subtitle: '(Khao Gaeng - Curry Rice)',
-    subtitleZh: '(咖喱饭)',
-    icon: '🍛',
-    area: 'ข้าวแกงเจ๊กปุ๋ย',
-    areaZh: '咖喱饭区',
-    rating: 4.6,
-    distance: '4.4 km',
+    title: 'นายย้ง เจ้าเก่าสำเหร่',
+    titleZh: '乃勇老店三赖',
+    subtitle: '(Naiyong Samrae)',
+    subtitleZh: '(乃勇老店三赖)',
+    icon: '🍨',
+    area: 'สำเหร่',
+    areaZh: '三赖',
+    rating: 4.2,
     category: 'food',
-    lat: 13.7466,
-    lng: 100.5097,
-    hours: 'เปิดอยู่จนถึง 15:00',
-    hoursZh: '营业至 15:00',
-    address: 'ข้าวแกงเจ๊กปุ๋ย กรุงเทพฯ\nข้าวราดแกงหลากหลายเมนู สดใหม่ทุกวัน',
-    addressZh: '咖喱饭区 曼谷\n多种咖喱饭，每天新鲜',
+    lat: 13.713342,
+    lng: 100.488770,
+    hours: 'เปิดอยู่จนถึง 17:00',
+    hoursZh: '营业至 17:00',
+    address: '359, ตากสิน สำเหร่ ธนบุรี กรุงเทพมหานคร\nเลยซ.ตากสิน17 หรือระหว่าง รพ.นิติเวช กับ ธ.กสิกร',
+    addressZh: '359, 达信路, 三赖, 吞武里, 曼谷\n达信巷17号后，在法医医院和开泰银行之间',
     transport: [
-      { icon: '🚇', text: '350 ม. จาก MRT สนามไชย', textZh: '距离 MRT 沙南猜站 350 米' },
-      { icon: '🚌', text: 'ป้ายรถเมล์ข้าวแกง', textZh: '咖喱饭公交站' }
+      { icon: '🚇', text: 'ใกล้ BTS วุฒากาศ', textZh: '靠近 BTS 武塔卡站' },
+      { icon: '🚌', text: 'ป้ายรถเมล์สำเหร่', textZh: '三赖公交站' }
     ],
-    phone: '02-278-3456',
+    phone: '094-894-2429',
     images: [
-      'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80',
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2023/03/22/4304aa857c5842639b34b23792a932e1.jpg',
+      'https://img.wongnai.com/p/1920x0/2024/05/03/23fc38dbf9ab4420b738bcdd6c8ba0ee.jpg',
+      'https://img.wongnai.com/p/1920x0/2022/04/22/6bb802e9c3404b9cb2a7bc0b8f0121ca.jpg',
+      'https://img.wongnai.com/p/1920x0/2022/03/18/e45bc501e6f04017b71ceae5b8aa60fb.jpg'
     ]
   },
   {
     id: 12,
-    title: 'โจ๊กสามย่าน',
-    titleZh: '三燕粥',
-    subtitle: '(Joke Samyan - Rice Porridge)',
-    subtitleZh: '(三燕粥)',
-    icon: '🥣',
-    area: 'โจ๊กสามย่าน',
-    areaZh: '三燕',
-    rating: 4.7,
-    distance: '4.1 km',
+    title: 'ยุ้ยเผือกทอด เสาชิงช้า',
+    titleZh: '油炸芋头摇摆柱',
+    subtitle: '(Yui Phueak Tod Sao Ching Cha)',
+    subtitleZh: '(油炸芋头摇摆柱)',
+    icon: '🍠',
+    area: 'เสาชิงช้า',
+    areaZh: '摇摆柱',
+    rating: 4.0,
     category: 'food',
-    lat: 13.7344,
-    lng: 100.5284,
-    hours: 'เปิดอยู่จนถึง 14:00',
-    hoursZh: '营业至 14:00',
-    address: 'โจ๊กสามย่าน กรุงเทพฯ\nโจ๊กหมูสูตรโบราณ เนื้อนุ่ม น้ำซุปเข้มข้น',
-    addressZh: '三燕 曼谷\n传统猪肉粥，肉嫩汤浓',
+    lat: 13.753431,
+    lng: 100.500519,
+    hours: 'เปิดอยู่จนถึง 08:30',
+    hoursZh: '营业至 08:30',
+    address: '130, มหรรณพ เสาชิงช้า พระนคร กรุงเทพมหานคร\nติดโรงเรียนสอนภาษาอาจารย์สงวน ติดริมถนนมหรรณพ',
+    addressZh: '130, 玛哈纳路, 摇摆柱, 帕那空, 曼谷\n靠近宋文语言学校，玛哈纳路旁',
     transport: [
-      { icon: '🚇', text: '200 ม. จาก MRT สามย่าน', textZh: '距离 MRT 三燕站 200 米' },
-      { icon: '🚌', text: 'ป้ายรถเมล์สามย่าน', textZh: '三燕公交站' }
+      { icon: '🚇', text: 'ใกล้เสาชิงช้า', textZh: '靠近摇摆柱' },
+      { icon: '🚌', text: 'ป้ายรถเมล์เสาชิงช้า', textZh: '摇摆柱公交站' }
     ],
-    phone: '02-289-6789',
+    phone: '0841417032',
     images: [
-      'https://images.unsplash.com/photo-1559847844-5315695dadae?w=400&q=80',
-      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80',
-      'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80',
-      'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=80'
+      'https://img.wongnai.com/p/1920x0/2025/08/22/32a25d27c7ef40099e65f4b5212d0669.jpg',
+      'https://img.wongnai.com/p/1920x0/2024/02/09/82d41c17164a48f59b0585f4711244f9.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/08/22/02bec6f39fcc47d1be13f24e4fa1e095.jpg',
+      'https://img.wongnai.com/p/1920x0/2025/03/08/6a012121c2c04b59b1d044176e0a5bcc.jpg'
     ]
   }
 ];
@@ -417,7 +401,7 @@ function createLocationCards() {
       <div class="location-card-content">
         <h3 class="location-card-title">${currentLang === 'zh' ? location.titleZh : location.title}</h3>
         <p class="location-card-area">${currentLang === 'zh' ? location.areaZh : location.area} 📍 ${location.rating}</p>
-        <p class="location-card-distance">กรุงเทพฯ · ${location.distance}</p>
+        <p class="location-card-distance">กรุงเทพฯ</p>
       </div>
       <div class="location-card-rating">⭐ ${location.rating}</div>
     `;
@@ -431,20 +415,8 @@ function createLocationCards() {
 // Add markers to map
 function addMarkers() {
   locationsData.forEach((location, index) => {
-    // Create custom icon
-    const customIcon = L.divIcon({
-      className: 'custom-marker',
-      html: `<span class="custom-marker-icon">${location.icon}</span>`,
-      iconSize: [40, 40],
-      iconAnchor: [20, 40],
-      popupAnchor: [0, -40]
-    });
-    
-    // Create marker
-    const marker = L.marker([location.lat, location.lng], { icon: customIcon }).addTo(map);
-    
-    // Add popup
-    marker.bindPopup(`<strong>${location.title}</strong>`);
+    // Create standard marker (Leaflet default - blue)
+    const marker = L.marker([location.lat, location.lng]).addTo(map);
     
     // Click event
     marker.on('click', () => {
@@ -469,11 +441,50 @@ function selectLocation(index) {
     locationCards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
   
-  // Pan map to marker
-  map.setView([location.lat, location.lng], 15, { animate: true });
+  // Reset all markers to default blue color
+  markers.forEach(marker => {
+    marker.setIcon(new L.Icon.Default());
+  });
   
-  // Open popup
-  markers[index].openPopup();
+  // Change selected marker to red
+  if (markers[index]) {
+    const redIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+    markers[index].setIcon(redIcon);
+  }
+  
+  // Get current zoom level (don't change it)
+  const currentZoom = map.getZoom();
+  
+  // Calculate offset to account for sidebar (320px)
+  // We need to shift the center point to the LEFT so the pin appears in the middle of visible area
+  const mapContainer = document.getElementById('map');
+  const sidebarWidth = 320;
+  
+  // Calculate how much to offset in pixels (shift left by half sidebar width)
+  const offsetPixels = -sidebarWidth / 2;
+  
+  // Convert the location to pixel coordinates at current zoom
+  const targetPoint = map.project([location.lat, location.lng], currentZoom);
+  
+  // Apply the offset (negative to shift left)
+  targetPoint.x += offsetPixels;
+  
+  // Convert back to lat/lng
+  const targetLatLng = map.unproject(targetPoint, currentZoom);
+  
+  // Pan to the adjusted center
+  map.panTo(targetLatLng, {
+    animate: true,
+    duration: 1,
+    easeLinearity: 0.5
+  });
   
   // Show detail panel
   showDetailPanel(location);
@@ -620,28 +631,27 @@ function setupStartWalking() {
   
   startBtn.addEventListener('click', () => {
     if (currentLocation) {
-      // Open Google Maps with directions
-      const destination = `${currentLocation.lat},${currentLocation.lng}`;
+      // Use restaurant name for search
       const locationName = encodeURIComponent(currentLocation.title);
       
       // Try to get user's current location
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
           (position) => {
-            // User location available - show directions from current location
+            // User location available - show directions from current location to restaurant name
             const origin = `${position.coords.latitude},${position.coords.longitude}`;
-            const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=walking`;
+            const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${locationName}&travelmode=walking`;
             window.open(mapsUrl, '_blank');
           },
-          (error) => {
-            // User location not available - just show destination
-            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${destination}&query_place_id=${locationName}`;
+          () => {
+            // User location not available - just search for restaurant name
+            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${locationName}`;
             window.open(mapsUrl, '_blank');
           }
         );
       } else {
-        // Geolocation not supported - just show destination
-        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${destination}&query_place_id=${locationName}`;
+        // Geolocation not supported - just search for restaurant name
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${locationName}`;
         window.open(mapsUrl, '_blank');
       }
     }
@@ -663,7 +673,6 @@ document.addEventListener('DOMContentLoaded', () => {
       area: loc.area,
       areaZh: loc.areaZh || loc.area,
       rating: loc.rating,
-      distance: loc.distance,
       category: loc.category || 'food',
       lat: loc.lat,
       lng: loc.lng,
@@ -696,14 +705,51 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('closeDetailPanel').addEventListener('click', closeDetailPanel);
   
   // Check if coming from Street Food page
+  const locationId = sessionStorage.getItem('exploreLocationId');
   const lat = sessionStorage.getItem('exploreLocationLat');
   const lng = sessionStorage.getItem('exploreLocationLng');
   
-  if (lat && lng) {
-    // Find matching location by coordinates
+  if (locationId) {
+    // Find matching location by ID (most reliable)
+    const matchingIndex = locationsData.findIndex(loc => loc.id === parseInt(locationId));
+    
+    if (matchingIndex !== -1) {
+      setTimeout(() => {
+        selectLocation(matchingIndex);
+      }, 500);
+    } else {
+      // Fallback to coordinate matching
+      if (lat && lng) {
+        const coordMatchingIndex = locationsData.findIndex(loc => 
+          Math.abs(loc.lat - parseFloat(lat)) < 0.001 && 
+          Math.abs(loc.lng - parseFloat(lng)) < 0.001
+        );
+        
+        if (coordMatchingIndex !== -1) {
+          setTimeout(() => {
+            selectLocation(coordMatchingIndex);
+          }, 500);
+        } else {
+          setTimeout(() => {
+            selectLocation(0);
+          }, 500);
+        }
+      } else {
+        setTimeout(() => {
+          selectLocation(0);
+        }, 500);
+      }
+    }
+    
+    // Clear sessionStorage
+    sessionStorage.removeItem('exploreLocationId');
+    sessionStorage.removeItem('exploreLocationLat');
+    sessionStorage.removeItem('exploreLocationLng');
+  } else if (lat && lng) {
+    // Find matching location by coordinates (increased tolerance)
     const matchingIndex = locationsData.findIndex(loc => 
-      Math.abs(loc.lat - parseFloat(lat)) < 0.0001 && 
-      Math.abs(loc.lng - parseFloat(lng)) < 0.0001
+      Math.abs(loc.lat - parseFloat(lat)) < 0.001 && 
+      Math.abs(loc.lng - parseFloat(lng)) < 0.001
     );
     
     if (matchingIndex !== -1) {

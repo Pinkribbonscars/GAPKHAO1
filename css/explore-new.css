@@ -193,11 +193,11 @@
 
 /* ── Location Detail Panel ────────────────────────────────────────── */
 .location-detail-panel {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 80px;
   left: -400px;
   width: 400px;
-  height: 100%;
+  height: calc(100vh - 80px);
   background: #FFF8E7;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
@@ -590,3 +590,22 @@
 .location-card:nth-child(4) { animation-delay: 0.2s; }
 .location-card:nth-child(5) { animation-delay: 0.25s; }
 .location-card:nth-child(6) { animation-delay: 0.3s; }
+
+
+/* ── Location Labels (Tooltips) ────────────────────────────────────────── */
+.location-label {
+  background: rgba(217, 107, 69, 0.95) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-family: 'Kanit', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  white-space: nowrap !important;
+}
+
+.location-label::before {
+  border-top-color: rgba(217, 107, 69, 0.95) !important;
+}

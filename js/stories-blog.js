@@ -3,7 +3,7 @@
    Thai Streetfood Softpower Theme
    ══════════════════════════════════════════════════════════════ */
 
-// Blog Data - 10 Bangkok Street Food Blogs
+// Blog Data - 5 Bangkok Street Food Blogs
 const blogsData = [
   {
     id: 'yaowarat-10-must-try',
@@ -11,12 +11,12 @@ const blogsData = [
     titleZh: '耀华力必尝的10种街头美食 🍜',
     area: 'เยาวราช',
     areaZh: '耀华力',
-    author: 'อินทิรา',
-    authorZh: '茵提拉',
+    author: 'wongnai',
+    authorZh: '内部',
     date: '12 Jan 2026',
     dateZh: '2026年1月12日',
-    readTime: '8 min read',
-    readTimeZh: '8分钟阅读',
+    readTime: '10 min read',
+    readTimeZh: '10分钟阅读',
     image: 'https://img.wongnai.com/p/1920x0/2017/04/17/683fa846fc3c40ca89348cca7b4f5926.jpg',
     excerpt: 'ย่านไชน่าทาวน์ที่ใหญ่ที่สุดในโลก และนี่คือ 10 เมนูระดับตำนานที่ถ้าไม่กินถือว่ามาไม่ถึง',
     excerptZh: '世界上最大的唐人街，这里有10道传奇美食，不吃等于没来过',
@@ -67,9 +67,7 @@ const blogsData = [
       <div class="blog-references">
         <h4>📚 อ้างอิง</h4>
         <ul>
-          <li><a href="https://th.trip.com/travel-guide/bangkok/yaowarat-road-78217/" target="_blank">รวมร้านเด็ดและวิธีเดินทางปี 2026 - Trip.com</a> (ข้อมูล MRT วัดมังกร และร้านในตำนาน)</li>
-          <li><a href="https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurants" target="_blank">Guide ร้าน Michelin ในเยาวราช - Michelin Guide</a></li>
-          <li><a href="https://www.wongnai.com/listings/street-food-lineman" target="_blank">Wongnai - Street Food Lineman</a></li>
+          <li><a href="https://www.wongnai.com/listings/wellknown-streetfood-lineman" target="_blank">10 ร้านสตรีทฟู้ดที่คนสั่งมากที่สุดใน LINE MAN หิวเมื่อไหร่ก็สั่งเลย!</a> </li>
         </ul>
       </div>
     `,
@@ -127,13 +125,13 @@ const blogsData = [
     titleZh: '阿里：都市街头美食 🥗',
     area: 'อารีย์',
     areaZh: '阿里',
-    author: 'อินทิรา',
-    authorZh: '茵提拉',
-    date: '10 Jan 2026',
-    dateZh: '2026年1月10日',
-    readTime: '7 min read',
-    readTimeZh: '7分钟阅读',
-    image: 'https://i.ytimg.com/vi/q6EX5pfss1g/maxresdefault.jpg',
+    author: 'trueid',
+    authorZh: 'trudid',
+    date: '27 Mar 2023',
+    dateZh: '2023年6月27日',
+    readTime: '10 min read',
+    readTimeZh: '10分钟阅读',
+    image: 'https://api.tourismthailand.org/upload/live/content_article/29080-26597.png',
     excerpt: 'ย่านที่ขึ้นชื่อเรื่องความชิค แต่ซ่อนร้านเด็ดราคาเป็นกันเองไว้เพียบ',
     excerptZh: '以时尚著称的街区，却隐藏着许多价格亲民的美味餐厅',
     content: `
@@ -160,7 +158,7 @@ const blogsData = [
       <div class="blog-references">
         <h4>📚 อ้างอิง</h4>
         <ul>
-          <li><a href="https://www.bkkmenu.com/ari-neighborhood-guide" target="_blank">BKKMENU - Ari Neighborhood Guide</a></li>
+          <li><a href="https://food.trueid.net/detail/0BbNwmvk1l0" target="_blank">ร้านอร่อย ซอยอารีย์ 2023 แลนด์มาร์คของกิน เจ้าดัง ย่านนี้ไม่ได้มีดีแค่คาเฟ่</a></li>
         </ul>
       </div>
     `,
@@ -188,7 +186,7 @@ const blogsData = [
       <div class="blog-references">
         <h4>📚 参考</h4>
         <ul>
-          <li><a href="https://www.bkkmenu.com/ari-neighborhood-guide" target="_blank">BKKMENU - Ari Neighborhood Guide</a></li>
+          <li><a href="https://food.trueid.net/detail/0BbNwmvk1l0" target="_blank">BKKMENU - Ari Neighborhood Guide</a></li>
         </ul>
       </div>
     `,
@@ -206,12 +204,12 @@ blogsData.push(
     titleZh: '乔差4：深夜美食帝国 🌙',
     area: 'โชคชัย 4',
     areaZh: '乔差4',
-    author: 'อินทิรา',
-    authorZh: '茵提拉',
+    author: 'wongnai',
+    authorZh: '内部',
     date: '8 Jan 2026',
     dateZh: '2026年1月8日',
-    readTime: '6 min read',
-    readTimeZh: '6分钟阅读',
+    readTime: '15 min read',
+    readTimeZh: '15分钟阅读',
     image: 'https://s.isanook.com/tr/0/ud/195/978241/13-7-2555_15-40-48.jpg',
     excerpt: 'ย่านที่คนลาดพร้าวรู้ดีว่า "ไม่มีวันอดตาย" เพราะของกินเยอะตลอด 24 ชั่วโมง',
     excerptZh: '拉差帕劳人都知道这里"永远不会饿死"，因为24小时都有美食',
@@ -239,7 +237,7 @@ blogsData.push(
       <div class="blog-references">
         <h4>📚 อ้างอิง</h4>
         <ul>
-          <li><a href="https://www.wongnai.com/trips/chok-chai-4-restaurants" target="_blank">Wongnai - รวมร้านเด็ดโชคชัย 4</a></li>
+          <li><a href="https://www.wongnai.com/listings/restaurants-chokchai4" target="_blank">Wongnai - รวมร้านเด็ดโชคชัย 4</a></li>
           <li><a href="https://www.youtube.com/watch?v=mqwnp8a1dpA" target="_blank">YouTube - ตลาดโชคชัย 4</a></li>
         </ul>
       </div>
@@ -268,7 +266,7 @@ blogsData.push(
       <div class="blog-references">
         <h4>📚 参考</h4>
         <ul>
-          <li><a href="https://www.wongnai.com/trips/chok-chai-4-restaurants" target="_blank">Wongnai - รวมร้านเด็ดโชคชัย 4</a></li>
+          <li><a href="https://www.wongnai.com/listings/restaurants-chokchai4" target="_blank">Wongnai - รวมร้านเด็ดโชคชัย 4</a></li>
         </ul>
       </div>
     `,
@@ -282,13 +280,13 @@ blogsData.push(
     titleZh: '圣路易斯（占巷18/7）：美食宝藏 🥟',
     area: 'เซนต์หลุยส์',
     areaZh: '圣路易斯',
-    author: 'อินทิรา',
+    author: 'ryoii',
     authorZh: '茵提拉',
-    date: '6 Jan 2026',
+    date: '',
     dateZh: '2026年1月6日',
-    readTime: '7 min read',
-    readTimeZh: '7分钟阅读',
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
+    readTime: '10 min read',
+    readTimeZh: '10分钟阅读',
+    image: 'https://www.ryoiireview.com/upload/article/201901/1547616454_18ff17b753e9b09156542772283ea3fa.jpg',
     excerpt: 'ย่านเก่าแก่ที่เต็มไปด้วยคนไทยเชื้อสายจีน ขนมและอาหารที่นี่จึงมีเอกลักษณ์',
     excerptZh: '充满泰籍华人的古老街区，这里的糕点和食物都有独特的特色',
     content: `
@@ -315,7 +313,7 @@ blogsData.push(
       <div class="blog-references">
         <h4>📚 อ้างอิง</h4>
         <ul>
-          <li><a href="https://www.timeout.com/bangkok/restaurants/soi-st-louis-food-guide" target="_blank">Time Out Bangkok - Soi St. Louis Food Guide</a></li>
+          <li><a href="https://www.ryoiireview.com/article/soi-saint-louis-restaurants/" target="_blank">รวมร้านเจ้าดัง 13 ร้าน ซอยเซนต์หลุยส์ หลายร้านเปิดมานานเกิน 10 ปี</a></li>
           <li><a href="https://www.youtube.com/watch?v=o5LT62MkYDg" target="_blank">YouTube - เซนต์หลุยส์</a></li>
         </ul>
       </div>
@@ -344,7 +342,7 @@ blogsData.push(
       <div class="blog-references">
         <h4>📚 参考</h4>
         <ul>
-          <li><a href="https://www.timeout.com/bangkok/restaurants/soi-st-louis-food-guide" target="_blank">Time Out Bangkok - Soi St. Louis Food Guide</a></li>
+          <li><a href="https://www.ryoiireview.com/article/soi-saint-louis-restaurants/" target="_blank">รวมร้านเจ้าดัง 13 ร้าน ซอยเซนต์หลุยส์ หลายร้านเปิดมานานเกิน 10 ปี</a></li>
         </ul>
       </div>
     `,
@@ -360,9 +358,9 @@ blogsData.push(
     areaZh: '塔玛哈拉-塔昌',
     author: 'อินทิรา',
     authorZh: '茵提拉',
-    date: '4 Jan 2026',
-    dateZh: '2026年1月4日',
-    readTime: '8 min read',
+    date: '11 Mar 2024',
+    dateZh: '2024年3月11日',
+    readTime: '10 min read',
     readTimeZh: '8分钟阅读',
     image: 'https://img.wongnai.com/p/1920x0/2018/04/17/c8aa7bfc690c448b83c86dd6de03e351.jpg',
     excerpt: '7 ร้านริมน้ำย่านท่ามหาราช-ท่าช้าง วิวแม่น้ำเจ้าพระยาสวยงาม อาหารอร่อย บรรยากาศดีเยี่ยม',
@@ -463,390 +461,6 @@ blogsData.push(
     location: 'ท่ามหาราช-ท่าช้าง แขวงพระบรมมหาราชวัง เขตพระนคร',
     locationZh: '塔玛哈拉-塔昌 帕博罗玛哈拉差旺区 帕那空县',
     mapLink: 'https://maps.google.com/?q=Tha+Maharaj+Bangkok'
-  }
-);
-
-// Add remaining 4 blogs
-blogsData.push(
-  {
-    id: 'pratu-phi-ghost-gate',
-    title: 'สตรีทฟู้ด "ประตูผี": นอกจากผัดไทยมีอะไรดี? 👻',
-    titleZh: '鬼门街头美食：除了炒河粉还有什么好吃的？👻',
-    area: 'ประตูผี',
-    areaZh: '鬼门',
-    author: 'อินทิรา',
-    authorZh: '茵提拉',
-    date: '2 Jan 2026',
-    dateZh: '2026年1月2日',
-    readTime: '7 min read',
-    readTimeZh: '7分钟阅读',
-    image: 'https://th.airportels.asia/wp-content/uploads/sites/2/2019/11/Padthai-thipsamat.jpg.webp',
-    excerpt: 'ย่านที่โด่งดังระดับโลก แต่ยังมีร้านลับที่คนท้องถิ่นชอบไป',
-    excerptZh: '世界闻名的街区，但仍有当地人喜欢去的秘密餐厅',
-    content: `
-      <h3>ย่านประวัติศาสตร์ใกล้เสาชิงช้า</h3>
-      <p>ประตูผีเป็นย่านที่มีชื่อเสียงระดับโลก มีร้านอาหารมากมายที่คนท้องถิ่นและนักท่องเที่ยวต่างชื่นชอบ</p>
-      
-      <h4>ผัดไทยทิพย์สมัย</h4>
-      <p>ผัดไทยที่มีชื่อเสียงระดับโลก ใช้วัตถุดิบคุณภาพดี รสชาติกลมกล่อม คิวยาวตลอดเวลา แต่รอคุ้มค่า</p>
-      
-      <h4>เจ๊ไฝ (Michelin Star)</h4>
-      <p>ร้านที่ได้รับดาว Michelin ก๋วยเตี๋ยวเรือรสเด็ด น้ำซุปเข้มข้น เครื่องแน่น ราคาไม่แพงแต่คุณภาพระดับพรีเมียม</p>
-      
-      <h4>บัวลอยสมหวัง</h4>
-      <p>บัวลอยที่มีชื่อเสียง คิวยาวไม่แพ้ร้านอื่น บัวลอยนุ่ม น้ำขิงหอม หรือจะเลือกน้ำกะทิก็อร่อย</p>
-      
-      <div class="blog-highlight">
-        <h4>🌟 The Vibe</h4>
-        <p>ย่านประวัติศาสตร์ใกล้เสาชิงช้า แสงไฟสวยงามตอนกลางคืน บรรยากาศคึกคักและมีชีวิตชีวา</p>
-      </div>
-      
-      <h4>การเดินทาง</h4>
-      <p>ใกล้เสาชิงช้า สามารถเดินทางโดยรถเมล์หรือแท็กซี่ มีที่จอดรถในบริเวณใกล้เคียง</p>
-      
-      <div class="blog-references">
-        <h4>📚 อ้างอิง</h4>
-        <ul>
-          <li><a href="https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurants" target="_blank">Michelin Guide Thailand</a></li>
-          <li><a href="https://food.trueid.net/detail/0QQMyDpZDm0" target="_blank">TrueID Food - ประตูผี</a></li>
-        </ul>
-      </div>
-    `,
-    contentZh: `
-      <h3>秋千柱附近的历史街区</h3>
-      <p>鬼门是世界闻名的街区，有许多当地人和游客都喜欢的餐厅。</p>
-      
-      <h4>提萨迈炒河粉</h4>
-      <p>世界闻名的炒河粉，使用优质食材，味道圆润，队伍一直很长，但值得等待。</p>
-      
-      <h4>姐痣（米其林星级）</h4>
-      <p>获得米其林星级的餐厅，船面美味，汤汁浓郁，配料丰富，价格不贵但质量一流。</p>
-      
-      <h4>颂旺汤圆</h4>
-      <p>著名的汤圆，队伍不输其他店，汤圆软，姜汤香，或者选择椰奶也很好吃。</p>
-      
-      <div class="blog-highlight">
-        <h4>🌟 氛围</h4>
-        <p>秋千柱附近的历史街区，夜晚灯光美丽，氛围热闹有活力。</p>
-      </div>
-      
-      <h4>交通</h4>
-      <p>靠近秋千柱，可乘公交车或出租车前往，附近有停车场。</p>
-      
-      <div class="blog-references">
-        <h4>📚 参考</h4>
-        <ul>
-          <li><a href="https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurants" target="_blank">Michelin Guide Thailand</a></li>
-        </ul>
-      </div>
-    `,
-    location: 'ย่านประตูผี แขวงบวรนิเวศ เขตพระนคร',
-    locationZh: '鬼门区 博沃尼威区 帕那空县',
-    mapLink: 'https://maps.google.com/?q=Pratu+Phi+Bangkok'
-  },
-  {
-    id: 'talad-noi-charoen-krung',
-    title: 'ตลาดน้อย-เจริญกรุง: การเดินทางของรสชาติ 🥢',
-    titleZh: '塔拉诺-乍伦功：风味之旅 🥢',
-    area: 'ตลาดน้อย-เจริญกรุง',
-    areaZh: '塔拉诺-乍伦功',
-    author: 'อินทิรา',
-    authorZh: '茵提拉',
-    date: '30 Dec 2025',
-    dateZh: '2025年12月30日',
-    readTime: '6 min read',
-    readTimeZh: '6分钟阅读',
-    image: 'https://www.ryoiireview.com/upload/article/201703/1489383862_eb935669c45405844c35aafbd5fe43d7.jpg',
-    excerpt: 'เจาะลึกอาหารแนวจีนโบราณที่หาทานยาก',
-    excerptZh: '深入探索难得一见的古老中国美食',
-    content: `
-      <h3>ย่านอาหารจีนโบราณ</h3>
-      <p>ตลาดน้อย-เจริญกรุงเป็นย่านที่มีอาหารจีนโบราณมากมาย มีร้านอาหารที่เปิดมานานหลายรุ่น</p>
-      
-      <h4>เป็ดตุ๋นเจ้าท่า</h4>
-      <p>เป็ดตุ๋นยาจีนที่เปื่อยนุ่ม น้ำซุปหอมยาจีน เนื้อเป็ดนุ่มละมุน เป็นร้านที่มีชื่อเสียงมากว่า 50 ปี</p>
-      
-      <h4>กะหรี่ปั๊บคุณปุ๊</h4>
-      <p>กะหรี่ปั๊บที่มีรสชาติเป็นเอกลักษณ์ แป้งกรอบนอกนุ่มใน ไส้แกงกะหรี่เข้มข้น กินคู่กับอาจาดหวานเปรี้ยว</p>
-      
-      <h4>โจ๊กเจ๊หมวยเกี้ย</h4>
-      <p>โจ๊กที่ใส่เครื่องแน่นจนมองไม่เห็นข้าว มีทั้งหมูสับ ไข่ไก่ ปลาหมึก และเครื่องในต่างๆ รสชาติกลมกล่อม</p>
-      
-      <div class="blog-highlight">
-        <h4>🎨 The Vibe</h4>
-        <p>ตรอกซอกซอยที่มี Street Art สลับกับกลิ่นหอมของเครื่องเทศ บรรยากาศย้อนยุคที่น่าเดินเล่น</p>
-      </div>
-      
-      <h4>การเดินทาง</h4>
-      <p>ใกล้ท่าเรือสี่พระยา สามารถเดินทางโดยเรือโดยสารหรือรถเมล์ มีศิลปะบนถนนมากมายให้ถ่ายรูป</p>
-      
-      <div class="blog-references">
-        <h4>📚 อ้างอิง</h4>
-        <ul>
-          <li><a href="https://www.creativedistrict.co/charoen-krung-guide" target="_blank">Creative District - Charoen Krung Guide</a></li>
-          <li><a href="https://www.ryoiireview.com/article/taradnoi-review-bkk/" target="_blank">Ryoii Review - ตลาดน้อย</a></li>
-        </ul>
-      </div>
-    `,
-    contentZh: `
-      <h3>古老中国美食街区</h3>
-      <p>塔拉诺-乍伦功是一个有许多古老中国美食的街区，有开业多代的餐厅。</p>
-      
-      <h4>码头炖鸭</h4>
-      <p>中药炖鸭软烂，汤汁中药香，鸭肉软嫩，是一家超过50年历史的著名餐厅。</p>
-      
-      <h4>坤普咖喱角</h4>
-      <p>味道独特的咖喱角，皮外脆内软，咖喱馅浓郁，配上甜酸酱。</p>
-      
-      <h4>姐妹粥</h4>
-      <p>配料多到看不见米饭的粥，有猪肉碎、鸡蛋、鱿鱼和各种内脏，味道圆润。</p>
-      
-      <div class="blog-highlight">
-        <h4>🎨 氛围</h4>
-        <p>小巷里有街头艺术与香料香气交织，复古氛围适合散步。</p>
-      </div>
-      
-      <h4>交通</h4>
-      <p>靠近四帕亚码头，可乘船或公交车前往，有很多街头艺术可以拍照。</p>
-      
-      <div class="blog-references">
-        <h4>📚 参考</h4>
-        <ul>
-          <li><a href="https://www.creativedistrict.co/charoen-krung-guide" target="_blank">Creative District - Charoen Krung Guide</a></li>
-        </ul>
-      </div>
-    `,
-    location: 'ตลาดน้อย-เจริญกรุง แขวงตลาดน้อย เขตสัมพันธวงศ์',
-    locationZh: '塔拉诺-乍伦功 塔拉诺区 三攀他旺县',
-    mapLink: 'https://maps.google.com/?q=Talad+Noi+Bangkok'
-  },
-  {
-    id: 'talad-huai-khwang',
-    title: 'ตลาดห้วยขวาง: สวรรค์ของสายกินนอนดึก 🌶️',
-    titleZh: '怀光市场：深夜美食天堂 🌶️',
-    area: 'ตลาดห้วยขวาง',
-    areaZh: '怀光市场',
-    author: 'อินทิรา',
-    authorZh: '茵提拉',
-    date: '28 Dec 2025',
-    dateZh: '2025年12月28日',
-    readTime: '8 min read',
-    readTimeZh: '8分钟阅读',
-    image: 'https://www.ryoiireview.com/upload/article/201703/1489383862_eb935669c45405844c35aafbd5fe43d7.jpg',
-    excerpt: 'ถ้าคุณหิวมื้อดึกตอนตี 2 ที่นี่คือคำตอบ',
-    excerptZh: '如果你凌晨2点饿了，这里就是答案',
-    content: `
-      <h3>ตลาดโต้รุ่งที่คึกคักตลอด 24 ชั่วโมง</h3>
-      <p>ตลาดห้วยขวางเป็นตลาดที่มีชีวิตชีวาตลอดทั้งวัน มีร้านอาหารเปิดจนดึกมาก เหมาะสำหรับคนที่ชอบกินมื้อดึก</p>
-      
-      <h4>กุ้งถัง สาขาแรกๆ</h4>
-      <p>กุ้งแช่น้ำปลาที่สดมาก กุ้งตัวใหญ่ เนื้อหวาน กินคู่กับข้าวสวยร้อนๆ คือความสุข เป็นสาขาแรกๆ ที่เปิดมานาน</p>
-      
-      <h4>ร้านข้าวต้มรอบดึก</h4>
-      <p>ข้าวต้มที่เปิดตลอด 24 ชั่วโมง มีเมนูให้เลือกมากมาย ทั้งข้าวต้มหมู ข้าวต้มปลา และข้าวต้มกุ้ง รสชาติกลมกล่อม</p>
-      
-      <h4>น้ำเต้าหู้เจ๊วรรณ (สาขาใกล้เคียง)</h4>
-      <p>น้ำเต้าหู้ร้อนๆ หอมหวาน กินคู่กับปาท่องโก๋กรอบๆ เหมาะสำหรับมื้อเช้าหรือมื้อดึก</p>
-      
-      <div class="blog-highlight">
-        <h4>🌙 The Vibe</h4>
-        <p>คึกคัก สนุกสนาน มีของกินรสจัดจ้านแบบอีสานเยอะมาก บรรยากาศตลาดที่มีชีวิตชีวาตลอดเวลา</p>
-      </div>
-      
-      <h4>การเดินทาง</h4>
-      <p>ใกล้ MRT ห้วยขวาง เดินเพียง 5 นาที มีร้านอาหารและร้านค้ามากมายเปิดจนดึก</p>
-      
-      <div class="blog-references">
-        <h4>📚 อ้างอิง</h4>
-        <ul>
-          <li><a href="https://travel.trueid.net/huai-khwang-food-guide" target="_blank">Travel.TrueID - พิกัดกินห้วยขวาง</a></li>
-          <li><a href="https://www.instagram.com/p/C3Z-ryRBp-B/" target="_blank">Instagram - ตลาดห้วยขวาง</a></li>
-        </ul>
-      </div>
-    `,
-    contentZh: `
-      <h3>24小时热闹的深夜市场</h3>
-      <p>怀光市场是一个全天充满活力的市场，有很多营业到很晚的餐厅，适合喜欢吃夜宵的人。</p>
-      
-      <h4>虾桶 早期分店</h4>
-      <p>鱼露腌虾非常新鲜，虾大肉甜，配上热米饭就是幸福，是开业很久的早期分店之一。</p>
-      
-      <h4>深夜粥店</h4>
-      <p>24小时营业的粥店，有很多菜单可选，包括猪肉粥、鱼粥和虾粥，味道圆润。</p>
-      
-      <h4>姐婉豆浆（附近分店）</h4>
-      <p>热豆浆香甜，配上脆油条，适合早餐或夜宵。</p>
-      
-      <div class="blog-highlight">
-        <h4>🌙 氛围</h4>
-        <p>热闹有趣，有很多东北风味的辛辣食物，市场氛围一直充满活力。</p>
-      </div>
-      
-      <h4>交通</h4>
-      <p>靠近MRT怀光站，步行仅5分钟，有很多餐厅和商店营业到很晚。</p>
-      
-      <div class="blog-references">
-        <h4>📚 参考</h4>
-        <ul>
-          <li><a href="https://travel.trueid.net/huai-khwang-food-guide" target="_blank">Travel.TrueID - พิกัดกินห้วยขวาง</a></li>
-        </ul>
-      </div>
-    `,
-    location: 'ตลาดห้วยขวาง แขวงห้วยขวาง เขตห้วยขวาง',
-    locationZh: '怀光市场 怀光区 怀光县',
-    mapLink: 'https://maps.google.com/?q=Huai+Khwang+Market+Bangkok'
-  },
-  {
-    id: 'wang-lang',
-    title: 'วังหลัง: สตรีทฟู้ดสายช้อปปิ้ง 👜',
-    titleZh: '王朗：购物街头美食 👜',
-    area: 'วังหลัง',
-    areaZh: '王朗',
-    author: 'อินทิรา',
-    authorZh: '茵提拉',
-    date: '26 Dec 2025',
-    dateZh: '2025年12月26日',
-    readTime: '7 min read',
-    readTimeZh: '7分钟阅读',
-    image: 'https://cms.dmpcdn.com/travel/2020/05/12/0006f5c0-941d-11ea-90c4-73c466dc4865_original.jpg',
-    excerpt: 'สวรรค์ของคนรักขนมหวานและของทานเล่นริมน้ำ',
-    excerptZh: '甜点和小吃爱好者的河边天堂',
-    content: `
-      <h3>ตลาดริมน้ำที่คึกคัก</h3>
-      <p>วังหลังเป็นตลาดที่มีชื่อเสียงในเรื่องขนมหวานและของทานเล่น มีทั้งร้านอาหารและร้านขายเสื้อผ้ามือสอง</p>
-      
-      <h4>ขนมปังวังหลัง (ไส้เยอะจนทะลัก)</h4>
-      <p>ขนมปังปิ้งที่มีไส้เยอะมาก มีหลายรสชาติให้เลือก ทั้งรสหวานและรสคาว ราคาถูก คุณภาพดี</p>
-      
-      <h4>ถังแตกป้าติ๋ม</h4>
-      <p>ขนมไทยโบราณที่ทำสดใหม่ทุกวัน มีหลายรสชาติให้เลือก รสชาติหวานมัน อร่อยมาก</p>
-      
-      <h4>หมูทอดชาววัง</h4>
-      <p>หมูทอดที่มีรสชาติหวานเค็มลงตัว กรอบนอกนุ่มใน กินคู่กับข้าวเหนียวร้อนๆ คือความสุข</p>
-      
-      <div class="blog-highlight">
-        <h4>🛍️ The Vibe</h4>
-        <p>ทางเดินแคบๆ ที่อัดแน่นไปด้วยของกินและเสื้อผ้ามือสอง บรรยากาศสนุกสนาน เหมาะสำหรับมาเดินเล่นและช้อปปิ้ง</p>
-      </div>
-      
-      <h4>การเดินทาง</h4>
-      <p>ใกล้ท่าเรือวังหลัง สามารถเดินทางโดยเรือโดยสารข้ามฟาก หรือรถเมล์ มีบรรยากาศริมน้ำที่สวยงาม</p>
-      
-      <div class="blog-references">
-        <h4>📚 อ้างอิง</h4>
-        <ul>
-          <li><a href="https://www.chillpainai.com/wang-lang-market" target="_blank">Chillpainai - ตะลุยตลาดวังหลัง</a></li>
-        </ul>
-      </div>
-    `,
-    contentZh: `
-      <h3>热闹的河边市场</h3>
-      <p>王朗是一个以甜点和小吃闻名的市场，有餐厅和二手服装店。</p>
-      
-      <h4>王朗面包（馅料多到溢出）</h4>
-      <p>烤面包馅料非常多，有多种口味可选，包括甜味和咸味，价格便宜，质量好。</p>
-      
-      <h4>阿婶爆桶</h4>
-      <p>每天新鲜制作的传统泰式甜点，有多种口味可选，甜而油腻，非常好吃。</p>
-      
-      <h4>王朝炸猪肉</h4>
-      <p>炸猪肉甜咸适中，外脆内软，配上热糯米饭就是幸福。</p>
-      
-      <div class="blog-highlight">
-        <h4>🛍️ 氛围</h4>
-        <p>狭窄的走道挤满了食物和二手衣服，氛围有趣，适合散步和购物。</p>
-      </div>
-      
-      <h4>交通</h4>
-      <p>靠近王朗码头，可乘渡船或公交车前往，河边风景优美。</p>
-      
-      <div class="blog-references">
-        <h4>📚 参考</h4>
-        <ul>
-          <li><a href="https://www.chillpainai.com/wang-lang-market" target="_blank">Chillpainai - ตะลุยตลาดวังหลัง</a></li>
-          <li><a href="https://travel.trueid.net/detail/zXJX8d74MkY" target="_blank">TrueID Travel - ตลาดวังหลัง</a></li>
-        </ul>
-      </div>
-    `,
-    location: 'ตลาดวังหลัง แขวงศิริราช เขตบางกอกน้อย',
-    locationZh: '王朗市场 诗丽叻区 曼谷诺县',
-    mapLink: 'https://maps.google.com/?q=Wang+Lang+Market+Bangkok'
-  },
-  {
-    id: 'phra-athit-road',
-    title: 'ถนนพระอาทิตย์: อาหารคลาสสิกริมสวน 🌳',
-    titleZh: '帕阿提路：公园旁的经典美食 🌳',
-    area: 'ถนนพระอาทิตย์',
-    areaZh: '帕阿提路',
-    author: 'อินทิรา',
-    authorZh: '茵提拉',
-    date: '24 Dec 2025',
-    dateZh: '2025年12月24日',
-    readTime: '7 min read',
-    readTimeZh: '7分钟阅读',
-    image: 'https://www.ryoiireview.com/upload/article/202311/1700568828_ba4100a48c73280bc0ff256b64ec19c9.jpg',
-    excerpt: 'ย่านที่มีเสน่ห์ที่สุดแห่งหนึ่งในกรุงเทพฯ เดินเล่นริมน้ำและหาของกินอร่อย',
-    excerptZh: '曼谷最迷人的街区之一，河边散步和寻找美食',
-    content: `
-      <h3>ย่านริมน้ำที่มีเสน่ห์</h3>
-      <p>ถนนพระอาทิตย์เป็นย่านที่มีเสน่ห์มาก มีร้านอาหารและคาเฟ่มากมาย เหมาะสำหรับเดินเล่นและนั่งชิลล์ริมน้ำ</p>
-      
-      <h4>โรตีมะตะบะ ร้านดัง</h4>
-      <p>โรตีที่มีชื่อเสียงมากว่า 30 ปี แป้งบางกรอบ ไส้เยอะ มีหลายรสชาติให้เลือก ราคาไม่แพงแต่อร่อยมาก</p>
-      
-      <h4>ก๋วยจั๊บญวนคุณแดง</h4>
-      <p>ก๋วยจั๊บญวนที่มีรสชาติเป็นเอกลักษณ์ น้ำซุปเข้มข้น เครื่องแน่น ราคาไม่แพงแต่คุณภาพดี</p>
-      
-      <h4>ร้านโภชนสยามา</h4>
-      <p>ร้านอาหารไทยโบราณที่มีเมนูอาหารไทยต้นตำรับ รสชาติกลมกล่อม บรรยากาศแบบดั้งเดิม</p>
-      
-      <div class="blog-highlight">
-        <h4>🌳 The Vibe</h4>
-        <p>ชิลล์ๆ สบายๆ เหมาะกับการเดินกินลมชมวิวช่วงเย็น มีสวนสาธารณะและริมน้ำให้นั่งพักผ่อน</p>
-      </div>
-      
-      <h4>การเดินทาง</h4>
-      <p>ใกล้ท่าเรือพระอาทิตย์ สามารถเดินทางโดยเรือโดยสารหรือรถเมล์ มีบรรยากาศริมน้ำที่สวยงาม</p>
-      
-      <div class="blog-references">
-        <h4>📚 อ้างอิง</h4>
-        <ul>
-          <li><a href="https://travel.kapook.com/phra-athit-road" target="_blank">Kapook Travel - เที่ยวถนนพระอาทิตย์</a></li>
-          <li><a href="https://www.ryoiireview.com/article/phra-arthit-road-food/" target="_blank">Ryoii Review - ถนนพระอาทิตย์</a></li>
-        </ul>
-      </div>
-    `,
-    contentZh: `
-      <h3>迷人的河边街区</h3>
-      <p>帕阿提路是一个非常迷人的街区，有许多餐厅和咖啡馆，适合散步和河边休闲。</p>
-      
-      <h4>马塔巴煎饼 著名店</h4>
-      <p>超过30年历史的著名煎饼，皮薄脆，馅料多，有多种口味可选，价格不贵但很好吃。</p>
-      
-      <h4>坤丹越南卷粉</h4>
-      <p>味道独特的越南卷粉，汤汁浓郁，配料丰富，价格不贵但质量好。</p>
-      
-      <h4>暹罗餐厅</h4>
-      <p>传统泰国餐厅，有正宗的泰国菜，味道圆润，传统氛围。</p>
-      
-      <div class="blog-highlight">
-        <h4>🌳 氛围</h4>
-        <p>轻松舒适，适合傍晚散步赏景，有公园和河边可以休息。</p>
-      </div>
-      
-      <h4>交通</h4>
-      <p>靠近帕阿提码头，可乘船或公交车前往，河边风景优美。</p>
-      
-      <div class="blog-references">
-        <h4>📚 参考</h4>
-        <ul>
-          <li><a href="https://travel.kapook.com/phra-athit-road" target="_blank">Kapook Travel - เที่ยวถนนพระอาทิตย์</a></li>
-        </ul>
-      </div>
-    `,
-    location: 'ถนนพระอาทิตย์ แขวงชนะสงคราม เขตพระนคร',
-    locationZh: '帕阿提路 差那颂堪区 帕那空县',
-    mapLink: 'https://maps.google.com/?q=Phra+Athit+Road+Bangkok'
   }
 );
 

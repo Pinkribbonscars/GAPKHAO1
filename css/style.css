@@ -198,6 +198,12 @@ body > .navbar:first-of-type:not(.scrolled) {
   letter-spacing: 0.05em;
 }
 
+.logo-image {
+  height: 45px;
+  width: auto;
+  display: block;
+}
+
 .logo-fist { font-size: 1.4rem; }
 .logo-text { color: var(--color-bg); }
 .navbar:not(.scrolled) .logo-text { color: var(--color-highlight); }

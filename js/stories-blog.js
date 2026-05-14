@@ -407,7 +407,7 @@ blogsData.push(
       <div class="blog-references">
         <h4>📚 อ้างอิง</h4>
         <ul>
-          <li>รีวิวจากผู้ใช้จริงในย่านท่ามหาราช-ท่าช้าง</li>
+          <li><a href="https://www.wongnai.com/listings/riverside-resturaunts-at-tha-maharaj-and-tha-chang" target="_blank">Riverside Restaurants at Tha Maharaj and Tha Chang - Wongnai</a></li>
           <li><a href="https://www.wongnai.com/listings/riverside-resturaunts-at-tha-maharaj-and-tha-chang" target="_blank">Wongnai - 7 ร้านริมน้ำท่ามหาราช ท่าช้าง</a></li>
         </ul>
       </div>

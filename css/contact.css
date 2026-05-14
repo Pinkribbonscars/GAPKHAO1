@@ -23,13 +23,15 @@
 
 .contact-hero {
   position: relative;
-  height: 60vh;
-  min-height: 400px;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--color-overlay), var(--color-overlay)),
               url('../images/street-food-1.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -279,8 +281,7 @@
 
 @media (max-width: 768px) {
   .contact-hero {
-    height: 50vh;
-    min-height: 350px;
+    padding: 4rem 1.5rem 3rem;
   }
   
   .contact-hero-content {
@@ -321,8 +322,7 @@
 
 @media (max-width: 480px) {
   .contact-hero {
-    height: 40vh;
-    min-height: 300px;
+    padding: 3rem 1rem 2rem;
   }
   
   .contact-hero-title {

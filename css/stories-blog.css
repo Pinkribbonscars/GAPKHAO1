@@ -300,6 +300,53 @@
   border-radius: var(--radius-sm);
 }
 
+/* ── Blog References Section ────────────────────────────────────────── */
+.blog-references {
+  background: #f8f8f8;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--color-accent2);
+  border-radius: var(--radius-sm);
+}
+
+.blog-references h4 {
+  font-family: 'Noto Serif Thai', serif;
+  font-size: 1.2rem;
+  color: var(--color-header);
+  margin-bottom: 1rem;
+}
+
+.blog-references ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.blog-references ul li {
+  padding-left: 0;
+  margin-bottom: 0.75rem;
+}
+
+.blog-references ul li::before {
+  display: none;
+}
+
+.blog-references a {
+  color: var(--color-accent2);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.blog-references a:hover {
+  color: var(--color-bg-dark);
+  text-decoration: underline;
+}
+
 .blog-tips h4,
 .blog-highlight h4,
 .blog-photo-tips h4,
